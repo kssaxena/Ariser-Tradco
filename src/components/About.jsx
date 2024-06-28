@@ -10,7 +10,7 @@ const About = () => {
   return (
     <div className={`text-white bg-[#020617]`}>
       <TracingBeam>
-        <LampContainer>
+        <LampContainer className={`flex flex-col justify-evenly items-center`}>
           <h1
             className={`text-center font-light text-5xl w-3/4 uppercase mt-10`}
           >
@@ -21,15 +21,15 @@ const About = () => {
           >
             lasting durability with steel door.
           </h1>
-        <Button title={"Book Now"}/>
         </LampContainer>
-        <section className={`bg-[#020617]`}>
+        <section className={`bg-[#020617] flex flex-col `}>
           <InfiniteMovingCards
             items={testimonials}
             direction="right"
             speed="slow"
           />
         </section>
+          {/* <Button title={"Book Now"}/> */}
       </TracingBeam>
     </div>
   );

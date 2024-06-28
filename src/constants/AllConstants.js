@@ -1,6 +1,8 @@
-import { react, testing } from "../assets/Index";
+import { Enquiry, Facebook, Instagram, Youtube, react, testing } from "../assets/Index";
 
 export const testing2 = [react, testing];
+
+export const footer = [Facebook, Instagram, Youtube, Enquiry];
 
 export const NavigationElements = [
   { id: "0", title: "Home", url: "#home" },
