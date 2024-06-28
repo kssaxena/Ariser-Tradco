@@ -1,13 +1,15 @@
 import { Enquiry, Facebook, Instagram, Youtube, react, testing } from "../assets/Index";
+// import { Facebook, Instagram, Youtube } from "lucide-react";
 
 export const testing2 = [react, testing];
 
-export const footer = [Facebook, Instagram, Youtube, Enquiry];
+export const footer = [Facebook, Instagram, Youtube];
+// export const footer = [Facebook, Instagram, Youtube];
 
 export const NavigationElements = [
   { id: "0", title: "Home", url: "#home" },
-  { id: "1", title: "Gallery", url: "#gallery" },
-  { id: "2", title: "About", url: "#about" },
+  { id: "1", title: "About", url: "#about" },
+  { id: "2", title: "Gallery", url: "#gallery" },
   { id: "3", title: "Contact", url: "#contact" },
 ];
 

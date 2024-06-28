@@ -4,7 +4,9 @@ import FeaturesCard from "./FeaturesCard";
 
 const ListOfFeatures = () => {
   return (
-    <section className={`flex flex-col justify-center items-center p-36`}>
+    <section
+      className={`flex flex-col justify-center items-center p-36 bg-gradient-to-b from-[#020617] to-[#18181B]`}
+    >
       <h1 className={`text-4xl font-light text-center uppercase`}>
         Few Highlighting Features of our product
       </h1>
