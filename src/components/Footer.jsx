@@ -1,5 +1,7 @@
 import React from "react";
 import {  footer } from "../constants/AllConstants";
+import FeaturesCard from "./FeaturesCard";
+import { BicepsFlexed } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -20,6 +22,9 @@ const Footer = () => {
           </a>
         ))}
       </section>
+      
+
+      
     </div>
   );
 };

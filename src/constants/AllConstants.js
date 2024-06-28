@@ -6,40 +6,42 @@ export const footer = [Facebook, Instagram, Youtube, Enquiry];
 
 export const NavigationElements = [
   { id: "0", title: "Home", url: "#home" },
-  { id: "1", title: "About", url: "#about" },
-  { id: "2", title: "Contact", url: "#contact" },
+  { id: "1", title: "Gallery", url: "#gallery" },
+  { id: "2", title: "About", url: "#about" },
+  { id: "3", title: "Contact", url: "#contact" },
 ];
 
 
 export const testimonials = [
   {
     quote:
-      "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.",
-    name: "Charles Dickens",
-    title: "A Tale of Two Cities",
+      "Fortified with strength and security, a steel door stands guard. Its unyielding surface, painted or gleaming bare, discourages unwanted entry. Unlike its wooden counterpart, it won't buckle under pressure or succumb to flames.  This dependable barrier offers peace of mind, a silent promise of protection for what lies beyond.",
+    name: "Unknown User",
+    title: "Superb Strength",
   },
   {
     quote:
-      "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
-    name: "William Shakespeare",
-    title: "Hamlet",
-  },
-  {
-    quote: "All that we see or seem is but a dream within a dream.",
-    name: "Edgar Allan Poe",
-    title: "A Dream Within a Dream",
+      "Clad in cool, industrial grey, a steel door exudes an air of stoic resilience. Its solid form provides a comforting sense of impenetrability, a stark contrast to the light tap-tap-tap that might announce a wooden door.  The satisfying weight behind a push on the handle assures a tight seal, muffling noise and keeping the elements at bay.  This is a portal built to last, a guardian against the outside world.",
+    name: "Unknown User",
+    title: "Styled with Elegance",
   },
   {
     quote:
-      "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
-    name: "Jane Austen",
-    title: "Pride and Prejudice",
+      "With a heavy groan on its hinges, the steel door swings open. Unlike the warm, inviting creak of wood, this sound speaks of purpose and resolve. A cold sheen catches the light, a subtle reminder of the industrial strength beneath the painted surface. This isn't just a point of entry, it's a line drawn in the sand, a barrier between the known and the unknown. Whether leading to a bustling server room or a solitary vault, the steel door demands a moment of pause, a silent respect for the power it holds.",
+    name: "Aryan Saxena, Ranchi",
+    title: "Very Convenient to Install",
   },
   {
     quote:
-      "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-    name: "Herman Melville",
-    title: "Moby-Dick",
+      "Hidden within an unassuming brick wall, a steel door waits patiently. Unlike its ornate wooden cousins that crave attention, this one prioritizes stealth. A faint outline might be the only clue to its existence. A keypad or a hidden keyhole activates its silent transformation. The heavy slab swings inward with a well-oiled whoosh, revealing a passage bathed in cool, artificial light. This isn't just a doorway, it's a secret passage, a portal to a world unseen, a testament to the hidden depths that can lie beneath the surface.",
+    name: "Shashi Prabha Saxena",
+    title: "Fascinating Designs",
   },
+  // {
+  //   quote:
+  //     "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
+  //   name: "Herman Melville",
+  //   title: "Moby-Dick",
+  // },
 ];
   

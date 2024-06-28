@@ -1,16 +1,18 @@
-import React from "react";
-import { AuroraBackground } from "./ui/aurora-background";
 // import { ButtonSvg } from "../assets/Index";
 // import { LampContainer } from "./ui/lamp";
+// import { ParallaxScroll } from "./ui/parallax-scroll";
+// import { ImageSlider } from "./ImageSlider";
+import React from "react";
+import { AuroraBackground } from "./ui/aurora-background";
 import { PinContainer } from "./ui/3d-pin";
 import Button from "./ui/Button";
 import { images } from "../assets/Images";
-// import { ParallaxScroll } from "./ui/parallax-scroll";
-// import { ImageSlider } from "./ImageSlider";
 
 const Home = () => {
+  const openGallery =() => {}
   return (
-    <div>
+    
+    <div id="home">
       <AuroraBackground className={`flex`}>
         <section className={`flex justify-center items-center`}>
           <div>
@@ -44,11 +46,11 @@ const Home = () => {
             </div>
             <div className={`flex justify-evenly items-center w-1/2 z-10 mt-8`}>
               <Button title={"Contact Us"} />
-              <Button title={"Gallery"} />
+              <Button title={"Gallery"} onClick={openGallery} />
               {/* <Button title="hello" /> */}
             </div>
           </div>
-          <div>
+          {/* <div>
             <PinContainer
               title="/ui.aceternity.com"
               href="https://twitter.com/mannupaaji"
@@ -65,7 +67,7 @@ const Home = () => {
                 <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" />
               </div>
             </PinContainer>
-          </div>
+          </div> */}
         </section>
         <section>
           {/* <ParallaxScroll></ParallaxScroll> */}
