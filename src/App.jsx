@@ -3,12 +3,14 @@ import { testing2 } from "./constants/AllConstants";
 import Header from "./components/Header";
 import { AuroraBackgroundDemo } from "./components/Background/LightingBG";
 import Home from "./components/Home";
+import About from "./components/About";
 
 function App() {
   return (
     <>
       <Header />
       <Home />
+      <About />
       {/* <div>
         <h1 className="text-3xl font-bold underline">Hello world!</h1>
         <img src={testing} />
