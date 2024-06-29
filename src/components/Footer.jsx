@@ -1,13 +1,11 @@
 import React from "react";
 import { footer } from "../constants/AllConstants";
-import FeaturesCard from "./FeaturesCard";
-import { BicepsFlexed } from "lucide-react";
-import { Gradient } from "./FooterGradient";
 
 const Footer = () => {
   return (
-    <div className={`flex w-full bg-[#0E0C15] justify-evenly items-center`}>
-      {/* <Gradient /> */}
+    <div
+      className={`flex flex-col w-full bg-[#0E0C15] justify-evenly items-center`}
+    >
       <section className="text-center text-gray-500 text-sm">
         <h1>
           2021 Ariser Tradco. <br></br>All rights reserved.

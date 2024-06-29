@@ -1,4 +1,19 @@
-import { Enquiry, Facebook, Instagram, Youtube, react, testing } from "../assets/Index";
+import {
+  Enquiry,
+  Facebook,
+  Instagram,
+  Youtube,
+  react,
+  testing,
+  discord,
+  slack,
+  photoshop,
+  protopie,
+  framer,
+  raindrop,
+  notion,
+  figma,
+} from "../assets/Index";
 // import { Facebook, Instagram, Youtube } from "lucide-react";
 
 export const testing2 = [react, testing];
@@ -12,7 +27,6 @@ export const NavigationElements = [
   { id: "2", title: "Gallery", url: "#gallery" },
   { id: "3", title: "Contact", url: "#contact" },
 ];
-
 
 export const testimonials = [
   {
@@ -46,4 +60,86 @@ export const testimonials = [
   //   title: "Moby-Dick",
   // },
 ];
-  
+
+export const BrandNameIcon = [
+  // { id: "0", title: "TATA PRAVESH", url: "#" },
+  {
+    id: "0",
+    title: "tata pravesh",
+    backgroundUrl: "./src/assets/tata-pravesh.png",
+  },
+  {
+    id: "1",
+    title: "tata pravesh",
+    backgroundUrl: "./src/assets/tata-pravesh.png",
+  },
+  {
+    id: "2",
+    title: "tata pravesh",
+    backgroundUrl: "./src/assets/tata-pravesh.png",
+  },
+  {
+    id: "3",
+    title: "tata pravesh",
+    backgroundUrl: "./src/assets/tata-pravesh.png",
+  },
+];
+
+export const collabApps = [
+  {
+    id: "0",
+    title: "Figma",
+    icon: figma,
+    width: 26,
+    height: 36,
+  },
+  {
+    id: "1",
+    title: "Notion",
+    icon: notion,
+    width: 34,
+    height: 36,
+  },
+  {
+    id: "2",
+    title: "Discord",
+    icon: discord,
+    width: 36,
+    height: 28,
+  },
+  {
+    id: "3",
+    title: "Slack",
+    icon: slack,
+    width: 34,
+    height: 35,
+  },
+  {
+    id: "4",
+    title: "Photoshop",
+    icon: photoshop,
+    width: 34,
+    height: 34,
+  },
+  {
+    id: "5",
+    title: "Protopie",
+    icon: protopie,
+    width: 34,
+    height: 34,
+  },
+  {
+    id: "6",
+    title: "Framer",
+    icon: framer,
+    width: 26,
+    height: 34,
+  },
+  {
+    id: "7",
+    title: "Raindrop",
+    icon: raindrop,
+    width: 38,
+    height:38,
+  },
+];

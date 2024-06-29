@@ -7,70 +7,86 @@ import { AuroraBackground } from "./ui/aurora-background";
 import { PinContainer } from "./ui/3d-pin";
 import Button from "./ui/Button";
 import { images } from "../assets/Images";
+import { react } from "../assets/Index";
+import { collabApps } from "../constants/AllConstants";
+import { RightCurve, LeftCurve } from "./ui/CurveForHero";
+import { MouseParallax } from "react-just-parallax";
+import { BackgroundCircles } from "./ui/BackgroundCircle";
+// import { images } from "../assets/Images";
 
 const Home = () => {
   const openGallery =() => {}
   return (
-    
-    <div id="home">
+    <div
+      id="home"
+      className={` bg-[url('./src/assets/heroLandingphoto.png')] `}
+    >
       <AuroraBackground className={`flex`}>
-        <section className={`flex justify-center items-center`}>
-          <div>
-            <PinContainer
-              title="Location"
-              href="https://maps.app.goo.gl/QYD3kMM3EcUncvtD8"
-            >
-              <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
-                <h3 className="max-w-xs !pb-2 !m-0 font-light  text-base text-slate-100 uppercase">
-                  Ariser tradco
-                </h3>
-
-                <img
-                  src={images[0].url}
-                  className={`rounded-lg h-full w-full`}
-                />
-                {/* <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" /> */}
-              </div>
-            </PinContainer>
-          </div>
+        <section className={`flex justify-center items-center  w-full`}>
           <div
-            className={`w-fit h-fit justify-center items-center flex flex-col  text-white overflow-hidden`}
+            className={`w-1/2 h-fit flex flex-col  text-white overflow-hidden `}
           >
             <div>
-              <h1 className={`text-white text-5xl font-medium`}>
-                Innovative Door
+              <h1 className={`text-white text-3xl font-medium ml-20`}>
+                Strength You Can Trust.
               </h1>
-              <h1 className={`text-white text-7xl font-medium`}>
-                Designs and Solution..
+              <h1 className={`text-white text-5xl font-medium ml-20`}>
+                Doors That Last..
               </h1>
             </div>
-            <div className={`flex justify-evenly items-center w-1/2 z-10 mt-8`}>
+            <div
+              className={`flex justify-evenly items-center w-1/2 z-10 ml-10 mt-8`}
+            >
               <Button title={"Contact Us"} />
-              <Button title={"Gallery"} onClick={openGallery} />
-              {/* <Button title="hello" /> */}
+              <Button title={"Our Products"} onClick={openGallery} />
             </div>
           </div>
-          {/* <div>
-            <PinContainer
-              title="/ui.aceternity.com"
-              href="https://twitter.com/mannupaaji"
-            >
-              <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
-                <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
-                  Aceternity UI
-                </h3>
-                <div className="text-base !m-0 !p-0 font-normal">
-                  <span className="text-slate-500 ">
-                    Customizable Tailwind CSS and Framer Motion Components.
-                  </span>
+          <div className={`lg:ml-auto xl:w-[38rem]  `}>
+            <div className="relative left-1/4 flex w-[24rem] aspect-square border border-n-6 rounded-full -translate-x-1/2 scale:75 md:scale-100 backdrop-blur-sm">
+              <div className="flex w-60 aspect-square m-auto border border-n-6 rounded-full">
+                <div className="w-[6rem] aspect-square m-auto p-[0.2rem] bg-conic-gradient rounded-full">
+                  <div className="flex items-center justify-center w-full h-full bg-n-8 rounded-full">
+                    <img
+                      src={images[1].url}
+                      className={`rounded-full`}
+                      width={100}
+                      height={100}
+                      alt="ariser_tradco"
+                    />
+                  </div>
                 </div>
-                <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" />
               </div>
-            </PinContainer>
-          </div> */}
-        </section>
-        <section>
-          {/* <ParallaxScroll></ParallaxScroll> */}
+
+              <ul>
+                {collabApps.map((app, index) => (
+                  <li
+                    key={app.id}
+                    className={`absolute top-0 left-1/2 h-1/2 -ml-[1.6rem] origin-bottom rotate-${
+                      index * 45
+                    }`}
+                  >
+                    <div
+                      className={`relative -top-[1.6rem] flex w-[3.2rem] h-[3.2rem] bg-[#15131D] border border-n-1/15 rounded-xl -rotate-${
+                        index * 45
+                      }`}
+                    >
+                      <img
+                        className="m-auto"
+                        width={app.width}
+                        height={app.height}
+                        alt={app.title}
+                        src={app.icon}
+                      />
+                    </div>
+                  </li>
+                ))}
+              </ul>
+
+              <LeftCurve />
+              <RightCurve />
+          {/* <BackgroundCircles/> */}
+            </div>
+          </div>
         </section>
       </AuroraBackground>
     </div>

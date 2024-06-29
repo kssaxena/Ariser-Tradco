@@ -13,7 +13,11 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        "form-grid": "url('src/assets/grid.png')",
+        "Location": "url('./src/assets/locationBG.png')",
+        "form-grid": "url('./src/assets/grid.png')",
+        "gradient": "url('./src/assets/gradient.png')",
+        "form_door": "url('./src/assets/contactFormPhoto.png')",
+        "hero_photo": "url('./src/assets/heroLandingphoto.png')",
       },
       animation: {
         scroll:

@@ -40,8 +40,8 @@ export const ParallaxScroll = ({
       )}
       ref={gridRef}
     >
-      <h1 className="w-full pt-10 text-center text-3xl text-[#16C4E0]">
-        Products Available
+      <h1 className="w-full pt-10 text-center text-3xl text-[#16C4E0] uppercase">
+        Products
       </h1>
       <div
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-start  max-w-5xl mx-auto gap-10 py-20 px-10"

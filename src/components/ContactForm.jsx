@@ -5,9 +5,24 @@ import Button from "./ui/Button";
 const ContactForm = () => {
   return (
     <div
-      className={`flex flex-col justify-center items-center w-full backdrop-blur-xl rounded-lg bg-transparent`}
+      className={`flex flex-col justify-center items-center w-full  rounded-lg`}
     >
       <form className={`flex flex-col w-full`}>
+        <div className={`text-white flex justify-evenly items-center`}>
+          <label
+            className={` flex w-[20%] justify-evenly rounded-xl p-2 border border-gray-500 backdrop-blur-xl shadow-md shadow-black`}
+          >
+            <input ClassName={` mr-20 `} type="checkbox" value={"customer"} />
+            Customer
+          </label>
+          or
+          <label
+            className={` flex w-[40%] justify-evenly rounded-xl p-2 border border-gray-500 backdrop-blur-xl shadow-md shadow-black`}
+          >
+            <input ClassName={` mr-20  `} type="checkbox" value={"Dealer"} />
+            Willing to own Dealership ?
+          </label>
+        </div>
         <label
           className={`m-2 text-lg font-light text-white pl-10`}
           htmlFor="name"
@@ -18,7 +33,7 @@ const ContactForm = () => {
         <input
           id="name"
           placeholder="Enter name"
-          className={` m-1 p-5 rounded-md bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] focus:outline-none focus:ring-1 focus:ring-black focus:ring-offset-1 focus:ring-offset-black text-white`}
+          className={` m-1 p-5 rounded-md backdrop-blur-xl bg-transparent border border-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-500 shadow-sm shadow-black focus:ring-offset-1 focus:ring-offset-black text-white`}
           type="name"
           required
         />
@@ -32,7 +47,7 @@ const ContactForm = () => {
         <input
           id="number"
           placeholder="Your Contact Number"
-          className={` m-1 p-5 rounded-md bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] focus:outline-none focus:ring-1 focus:ring-black focus:ring-offset-1 focus:ring-offset-black text-white`}
+          className={` m-1 p-5 rounded-md backdrop-blur-xl bg-transparent border border-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-500 shadow-sm shadow-black focus:ring-offset-1 focus:ring-offset-black text-white`}
           type="number"
           required
         />
@@ -44,7 +59,7 @@ const ContactForm = () => {
           Current Location
         </label>
         <select
-          className={` m-1 p-5 rounded-md bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] focus:outline-none focus:ring focus:ring-black focus:ring-offset focus:ring-offset-black text-white`}
+          className={` m-1 p-5 rounded-md backdrop-blur-xl bg-transparent border border-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-500 shadow-sm shadow-black focus:ring-offset-1 focus:ring-offset-black text-white`}
         >
           <option className="bg-[#18181B]">Select</option>
           <option className="bg-[#18181B]">Ranchi</option>
@@ -71,7 +86,7 @@ const ContactForm = () => {
         <input
           id="address"
           placeholder="Construction Site Address"
-          className={` m-1 p-5 rounded-md bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] focus:outline-none focus:ring-1 focus:ring-black focus:ring-offset-1 focus:ring-offset-black text-white`}
+          className={` m-1 p-5 rounded-md backdrop-blur-xl bg-transparent border border-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-500 shadow-sm shadow-black focus:ring-offset-1 focus:ring-offset-black text-white`}
           type="address"
           required
         />
