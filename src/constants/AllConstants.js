@@ -1,3 +1,4 @@
+import { PlusSquare } from "lucide-react";
 import {
   Enquiry,
   Facebook,
@@ -14,18 +15,169 @@ import {
   notion,
   figma,
 } from "../assets/Index";
-// import { Facebook, Instagram, Youtube } from "lucide-react";
 
 export const testing2 = [react, testing];
 
 export const footer = [Facebook, Instagram, Youtube];
-// export const footer = [Facebook, Instagram, Youtube];
 
 export const NavigationElements = [
   { id: "0", title: "Home", url: "#home" },
-  { id: "1", title: "About", url: "#about" },
-  { id: "2", title: "Gallery", url: "#gallery" },
-  { id: "3", title: "Contact", url: "#contact" },
+  { id: "1", title: "Products", url: "#products_slider" },
+  { id: "2", title: "About", url: "#about" },
+  { id: "3", title: "Gallery", url: "#gallery" },
+  { id: "4", title: "Contact", url: "#contact" },
+];
+
+export const ProductDetails1 = [
+  {
+    id: "0",
+    icon: "Know More",
+    title: "Steel Doors",
+    photo:
+      "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575956/AriserTradco/IMG-20240628-WA0008_phtusd.jpg",
+  },
+  {
+    id: "1",
+    icon: "Know More",
+    title: "Steel Doors",
+    photo:
+      "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575956/AriserTradco/IMG-20240628-WA0009_xav4m2.jpg",
+  },
+  {
+    id: "2",
+    icon: "Know More",
+    title: "Steel Doors",
+    photo:
+      "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575956/AriserTradco/IMG-20240628-WA0010_z97gg4.jpg",
+  },
+  {
+    id: "3",
+    icon: "Know More",
+    title: "Steel Doors",
+    photo:
+      "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575956/AriserTradco/IMG-20240628-WA0007_bdbds8.jpg",
+  },
+  {
+    id: "4",
+    icon: "Know More",
+    title: "Steel Doors",
+    photo:
+      "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575956/AriserTradco/IMG-20240628-WA0006_tsdott.jpg",
+  },
+];
+
+export const ProductDetails2 = [
+  {
+    id: "0",
+    icon: "Know More",
+    title: "Steel Doors",
+    photo:
+      "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575956/AriserTradco/IMG-20240628-WA0005_gw6l2m.jpg",
+  },
+  {
+    id: "1",
+    icon: "Know More",
+    title: "Steel Doors",
+    photo:
+      "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575955/AriserTradco/IMG-20240628-WA0004_ww4e3g.jpg",
+  },
+  {
+    id: "2",
+    icon: "Know More",
+    title: "Steel Doors",
+    photo:
+      "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575955/AriserTradco/IMG-20240628-WA0019_idoghw.jpg",
+  },
+  {
+    id: "3",
+    icon: "Know More",
+    title: "Steel Doors",
+    photo:
+      "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575955/AriserTradco/IMG-20240628-WA0015_be8mqe.jpg",
+  },
+  {
+    id: "4",
+    icon: "Know More",
+    title: "Steel Doors",
+    photo:
+      "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575955/AriserTradco/IMG-20240628-WA0003_ptm3ju.jpg",
+  },
+];
+
+export const ProductDetails3 = [
+  {
+    id: "0",
+    icon: "Know More",
+    title: "Steel Doors",
+    photo:
+      "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575955/AriserTradco/IMG-20240628-WA0022_welqld.jpg",
+  },
+  {
+    id: "1",
+    icon: "Know More",
+    title: "Steel Doors",
+    photo:
+      "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575955/AriserTradco/IMG-20240628-WA0014_ndhkyh.jpg",
+  },
+  {
+    id: "2",
+    icon: "Know More",
+    title: "Steel Doors",
+    photo:
+      "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575954/AriserTradco/IMG-20240628-WA0021_yrhoy6.jpg",
+  },
+  {
+    id: "3",
+    icon: "Know More",
+    title: "Steel Doors",
+    photo:
+      "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575954/AriserTradco/IMG-20240628-WA0020_ouy4b2.jpg",
+  },
+  {
+    id: "4",
+    icon: "Know More",
+    title: "Steel Doors",
+    photo:
+      "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575954/AriserTradco/IMG-20240628-WA0018_pbjcoo.jpg",
+  },
+];
+
+export const ProductDetails4 = [
+  {
+    id: "0",
+    icon: "Know More",
+    title: "Steel Doors",
+    photo:
+      "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575954/AriserTradco/IMG-20240628-WA0017_dvgk5x.jpg",
+  },
+  {
+    id: "1",
+    icon: "Know More",
+    title: "Steel Doors",
+    photo:
+      "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575954/AriserTradco/IMG-20240628-WA0012_savwma.jpg",
+  },
+  {
+    id: "2",
+    icon: "Know More",
+    title: "Steel Doors",
+    photo:
+      "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575954/AriserTradco/IMG-20240628-WA0011_fr801m.jpg",
+  },
+  {
+    id: "3",
+    icon: "Know More",
+    title: "Steel Doors",
+    photo:
+      "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575953/AriserTradco/IMG-20240628-WA0016_gspvf6.jpg",
+  },
+  {
+    id: "4",
+    icon: "Know More",
+    title: "Steel Doors",
+    photo:
+      "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575956/AriserTradco/IMG-20240628-WA0008_phtusd.jpg",
+  },
 ];
 
 export const testimonials = [
@@ -140,6 +292,6 @@ export const collabApps = [
     title: "Raindrop",
     icon: raindrop,
     width: 38,
-    height:38,
+    height: 38,
   },
 ];

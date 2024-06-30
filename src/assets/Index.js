@@ -21,8 +21,10 @@ import framer from "./framer.png";
 import raindrop from "./raindrop.png";
 import curve1 from "./curve-1.svg";
 import curve2 from "./curve-2.svg";
+import productCardBG from "./ProductCardBG.png";
 
 export {
+  productCardBG,
   curve1,
   curve2,
   discord,

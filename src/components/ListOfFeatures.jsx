@@ -66,10 +66,7 @@ const ListOfFeatures = () => {
           />
         </div>
       </section>
-      <div id="contact" className={`w-full h-full bg-[#17171B]`}>
-        <h1 className={`text-4xl w-full text-center mb-10`}>Location</h1>
-        <LocationCardDescription />
-      </div>
+      
     </div>
   );
 };

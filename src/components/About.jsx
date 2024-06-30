@@ -12,7 +12,7 @@ const About = () => {
       <TracingBeam>
         <LampContainer className={`flex flex-col justify-evenly items-center`}>
           <h1
-            className={`text-center font-light text-5xl w-3/4 uppercase mt-10`}
+            className={`text-center font-light text-5xl w-3/4 uppercase `}
           >
             Invest in peace of mind
           </h1>
@@ -25,10 +25,9 @@ const About = () => {
           <InfiniteMovingCards
             items={testimonials}
             direction="right"
-            speed="slow"
+            speed="normal"
           />
         </section>
-        <section></section>
       </TracingBeam>
       <ListOfFeatures />
     </div>

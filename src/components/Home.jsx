@@ -35,7 +35,7 @@ const Home = () => {
               </h1>
             </div>
             <div
-              className={`flex justify-evenly items-center w-1/2 z-10 ml-10 mt-8`}
+              className={`flex justify-evenly items-center w-1/2 z-10 ml-10 mt-8  p-1`}
             >
               <Button title={"Contact Us"} />
               <Button title={"Our Products"} onClick={openGallery} />
@@ -57,7 +57,7 @@ const Home = () => {
                 </div>
               </div>
 
-              <ul>
+              {/* <ul>
                 {collabApps.map((app, index) => (
                   <li
                     key={app.id}
@@ -80,7 +80,7 @@ const Home = () => {
                     </div>
                   </li>
                 ))}
-              </ul>
+              </ul> */}
 
               <LeftCurve />
               <RightCurve />
