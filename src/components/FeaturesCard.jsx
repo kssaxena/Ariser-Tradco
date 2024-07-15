@@ -7,7 +7,7 @@ const FeaturesCard = ({ title, icon, description }) => {
     >
       <h1 className="shadow-2xl ">{icon}</h1>
       <h1 className="text-3xl m-2 uppercase">{title}</h1>
-      <p className="text-sm font-light m-2 text-center">{description}</p>
+      <p className="text-sm font-light m-2 text-center sm:w-full sm">{description}</p>
     </div>
   );
 };

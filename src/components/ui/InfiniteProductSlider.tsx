@@ -2,6 +2,7 @@
 import { cn } from "../../utils/cn";
 import React, { useEffect, useState } from "react";
 import Button from "./Button";
+import { useNavigate } from "react-router-dom";
 
 export const InfiniteProductSlider = ({
   items,
@@ -11,6 +12,7 @@ export const InfiniteProductSlider = ({
   className,
 }: {
   items: {
+    id: number;
     photo: string;
     title: string;
     icon: string;
@@ -22,6 +24,12 @@ export const InfiniteProductSlider = ({
 }) => {
   const containerRef = React.useRef<HTMLDivElement>(null);
   const scrollerRef = React.useRef<HTMLUListElement>(null);
+  const navigate = useNavigate();
+
+  function NavigateToProduct(id: number) {
+    navigate(`/productDescription/${id}`);
+    console.log(`Navigate to`);
+  }
 
   useEffect(() => {
     addAnimation();
@@ -85,15 +93,15 @@ export const InfiniteProductSlider = ({
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
       >
-        {items.map((item, idx) => (
+        {items.map((item, index) => (
           <li
             className="px-5 py-5  max-w-full relative rounded-2xl border shadow-sm shadow-black flex-shrink-0 border-gray-500  flex justify-center items-center "
             // style={{
             //   background:
             //     "linear-gradient(180deg, var(--slate-800), var(--slate-900)",
             // }}
-            
-            key={item.photo}
+
+            key={item.id}
           >
             <blockquote>
               <div
@@ -112,7 +120,10 @@ export const InfiniteProductSlider = ({
                     {item.title}
                   </span>
                   <span className=" text-sm leading-[1.6] text-gray-400 font-normal">
-                    <Button title={item.icon} />
+                    <Button
+                      title={item.icon}
+                      onClick={() => NavigateToProduct(item.id)}
+                    />
                   </span>
                 </span>
               </div>
