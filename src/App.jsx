@@ -6,9 +6,7 @@ import Slider from "./components/Slider";
 import Contact from "./components/Contact";
 import ProductSlider from "./components/ProductSlider";
 import { Routes, Route } from "react-router-dom";
-import ProductPopUp from "./components/ProductPopUp";
-import ContactForm from "./components/ContactForm";
-import Test from "./components/test";
+// import ContactPopUp from "./components/ProductPopUp";
 
 function App() {
   return (
@@ -16,14 +14,13 @@ function App() {
       <Header />
       <Home />
       <Slider />
+      <Routes>
+        <Route exact path="/gallery" element={<Slider />} />
+      </Routes>
       <ProductSlider />
-      {/* <Routes>
-        <Route exact path="/productDescription/:id" element={<ProductPopUp />} />
-      </Routes> */}
       <About />
       <Contact />
       <Footer />
-      {/* <Test />{" "} */}
     </>
   );
 }

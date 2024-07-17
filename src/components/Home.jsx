@@ -1,20 +1,17 @@
-// import { ButtonSvg } from "../assets/Index";
-// import { LampContainer } from "./ui/lamp";
-// import { ParallaxScroll } from "./ui/parallax-scroll";
-// import { ImageSlider } from "./ImageSlider";
 import React from "react";
 import { AuroraBackground } from "./ui/aurora-background";
-import { PinContainer } from "./ui/3d-pin";
 import Button from "./ui/Button";
 import { images } from "../assets/Images";
-import { react } from "../assets/Index";
-import { collabApps } from "../constants/AllConstants";
 import { RightCurve, LeftCurve } from "./ui/CurveForHero";
-import { MouseParallax } from "react-just-parallax";
-import { BackgroundCircles } from "./ui/BackgroundCircle";
-// import { images } from "../assets/Images";
+import { ContactPopUp } from "./ProductPopUp";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
+  // const navigate = useNavigate();
+
+  const [showContactPopUp, setShowContactForm] = useState(false);
+
   const openGallery = () => {};
   return (
     <div
@@ -37,9 +34,15 @@ const Home = () => {
             <div
               className={`flex justify-evenly items-center w-1/2 z-10 ml-10 mt-8  p-1`}
             >
-              <Button title={"Contact Us"} />
+              <Button
+                title={"Contact Us"}
+                onClick={() => setShowContactForm(true)}
+              />
               <Button title={"Our Products"} onClick={openGallery} />
             </div>
+            {showContactPopUp && (
+              <ContactPopUp onClose={() => setShowContactForm(false)} />
+            )}
           </div>
           <div className={`lg:ml-auto xl:w-[38rem]  `}>
             <div className="relative left-1/4 flex w-[24rem] aspect-square border border-n-6 rounded-full -translate-x-1/2 scale:75 md:scale-100 backdrop-blur-sm">

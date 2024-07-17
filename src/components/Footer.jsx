@@ -1,5 +1,6 @@
 import React from "react";
 import { footer } from "../constants/AllConstants";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -14,7 +15,7 @@ const Footer = () => {
         </section>
         <section className={`flex p-5 text-white`}>
           {footer.map((icon, index) => (
-            <a
+            <Link
               className="text-white p-5 flex w-fit text-lg uppercase cursor-pointer hover:font-medium hover:scale-110 ease-in-out duration-200"
               key={index}
             >
@@ -24,7 +25,7 @@ const Footer = () => {
                 height={25}
                 className="bg-[#15131D] rounded-full"
               />
-            </a>
+            </Link>
           ))}
         </section>
       </div>

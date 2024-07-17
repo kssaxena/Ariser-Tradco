@@ -1,16 +1,20 @@
 import React from "react";
-// import Link from "react";
-// import { Link } from "react-scroll";
 import { NavigationElements } from "../constants/AllConstants";
 import Button from "./ui/Button";
 import { images } from "../assets/Images";
-// import useLocation from "react-dom";
+// import { useNavigate } from "react-router-dom";
+import { BookPopUp } from "./ProductPopUp.jsx";
+import { useState } from "react";
 
 const Header = () => {
-  const handleClick = () => {if (!openNavigation) return;
+  const [showContactPopUp, setShowContactForm] = useState(false);
 
-  enablePageScroll();
-  setOpenNavigation(false);};
+  const handleClick = () => {
+    if (!openNavigation) return;
+
+    enablePageScroll();
+    setOpenNavigation(false);
+  };
   return (
     <div
       className={`flex justify-center items-center fixed w-full p-5 top-0 left-0 z-50 text-white  backdrop-blur-lg shadow-sm shadow-black `}
@@ -38,9 +42,12 @@ const Header = () => {
         ))}
       </section>
       <section className={`flex justify-center items-center w-[10%]`}>
-        <Button title={"Book Now"} />
+        <Button title={"Book Now"} onClick={() => setShowContactForm(true)} />
       </section>
-      {/* <h1>hello duniya</h1> */}
+
+      {showContactPopUp && (
+        <BookPopUp onClose={() => setShowContactForm(false)} />
+      )}
     </div>
   );
 };
