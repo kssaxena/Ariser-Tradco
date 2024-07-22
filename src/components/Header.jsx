@@ -5,6 +5,7 @@ import { images } from "../assets/Images";
 // import { useNavigate } from "react-router-dom";
 import { BookPopUp } from "./ProductPopUp.jsx";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 const Header = () => {
   const [showContactPopUp, setShowContactForm] = useState(false);
@@ -19,7 +20,12 @@ const Header = () => {
     <div
       className={`flex justify-center items-center fixed w-full p-5 top-0 left-0 z-50 text-white  backdrop-blur-lg shadow-sm shadow-black `}
     >
-      <section className={`logo w-[60%] flex items-center pl-28`}>
+      <motion.section
+        initial={{ x: -100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+        className={`logo w-[60%] flex items-center pl-28`}
+      >
         <img
           src={images[1].url}
           className={`mr-10 rounded-full`}
@@ -28,7 +34,7 @@ const Header = () => {
           alt="ariser_tradco"
         />
         <h1>ARISER TRADCO</h1>
-      </section>
+      </motion.section>
       <section className={`navbar w-[40%] flex justify-evenly items-center `}>
         {NavigationElements.map((item) => (
           <a
@@ -41,9 +47,14 @@ const Header = () => {
           </a>
         ))}
       </section>
-      <section className={`flex justify-center items-center w-[10%]`}>
+      <motion.section
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+        className={`flex justify-center items-center w-[10%]`}
+      >
         <Button title={"Book Now"} onClick={() => setShowContactForm(true)} />
-      </section>
+      </motion.section>
 
       {showContactPopUp && (
         <BookPopUp onClose={() => setShowContactForm(false)} />

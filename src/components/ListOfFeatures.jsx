@@ -21,6 +21,8 @@ const ListOfFeatures = () => {
         </h1>
         <div className={`flex p-10  w-full justify-center items-center`}>
           <FeaturesCard
+            // DelayDuration={0.5}
+            Timeduration={1.5}
             icon={<BicepsFlexed className={`h-20 w-20`} />}
             title={"Strength"}
             description={
@@ -28,6 +30,8 @@ const ListOfFeatures = () => {
             }
           />
           <FeaturesCard
+            // DelayDuration={1}
+            Timeduration={1}
             icon={<ShieldCheck className={`h-20 w-20`} />}
             title={"Safe & Secure"}
             description={
@@ -35,6 +39,8 @@ const ListOfFeatures = () => {
             }
           />
           <FeaturesCard
+            // DelayDuration={1.5}
+            Timeduration={0.5}
             icon={<Sprout className={`h-20 w-20`} />}
             title={"Eco Friendly"}
             description={
@@ -44,6 +50,7 @@ const ListOfFeatures = () => {
         </div>
         <div className={`flex p-4 w-full justify-center items-center`}>
           <FeaturesCard
+            // Timeduration={0.5}
             icon={<BugOff className={`h-20 w-20`} />}
             title={"Termite Free"}
             description={
@@ -51,6 +58,8 @@ const ListOfFeatures = () => {
             }
           />
           <FeaturesCard
+            // DelayDuration={2}
+            Timeduration={1}
             icon={<FireExtinguisher className={`h-20 w-20`} />}
             title={"Fire Resistant"}
             description={
@@ -58,6 +67,7 @@ const ListOfFeatures = () => {
             }
           />
           <FeaturesCard
+            // Timeduration={1.5}
             icon={<UmbrellaOff className={`h-20 w-20`} />}
             title={"Weather Proof"}
             description={
@@ -66,7 +76,6 @@ const ListOfFeatures = () => {
           />
         </div>
       </section>
-      
     </div>
   );
 };

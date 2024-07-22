@@ -1,6 +1,7 @@
 import React from "react";
 import { ParallaxScroll } from "./ui/parallax-scroll";
 import { ImageSlider } from "./ImageSlider";
+import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 
 const Slider = () => {
@@ -10,8 +11,17 @@ const Slider = () => {
         id="gallery"
         className={` bg-[url('./src/assets/grid.png')] flex flex-col pt-20 justify-center items-center p-20`}
       >
-        <h1 className={`text-5xl text-white font-light uppercase pt-20 pb-5`}>Products</h1>
-        <ParallaxScroll ImageSlider={ImageSlider} />
+        <motion.h1
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: -100 }}
+          transition={{ duration: 1.5 }}
+          className={`text-6xl text-center font-sans bg-gradient-to-r from-pink-300 via-cyan-500 to-purple-500 bg-clip-text tracking-tight text-transparent m-10`}
+        >
+          Have a look on our products...
+        </motion.h1>
+        <div className="w-full flex justify-center items-center">
+          <ParallaxScroll ImageSlider={ImageSlider} />
+        </div>
       </div>
     </div>
   );

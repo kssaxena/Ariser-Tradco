@@ -10,18 +10,15 @@ import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <>
+    <div className="overflow-hidden">
       <Header />
       <Home />
       <Slider />
-      <Routes>
-        <Route exact path="/gallery" element={<Slider />} />
-      </Routes>
       <ProductSlider />
       <About />
       <Contact />
       <Footer />
-    </>
+    </div>
   );
 }
 

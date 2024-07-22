@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 // import { cn } from "@/utils/cn";
 import { cn } from "../../utils/cn";
 
-
 export const LampContainer = ({
   children,
   className,
@@ -82,6 +81,8 @@ export const LampContainer = ({
       <div className="relative z-50 flex -translate-y-80 flex-col items-center">
         {children}
       </div>
+
+     
     </div>
   );
 };

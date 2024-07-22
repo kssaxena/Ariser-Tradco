@@ -3,12 +3,20 @@ import { Spotlight } from "./ui/Spotlight";
 import ContactForm from "./ContactForm";
 import { ChevronDown } from "lucide-react";
 import LocationCardDescription from "./LocationCardDescription";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
     <div>
       <div id="contact" className={`w-full h-full bg-[#17171B] pt-28 pb-16`}>
-        <h1 className={`text-4xl w-full text-center mb-10 text-white uppercase`}>Location</h1>
+        <motion.h1
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: -100 }}
+          transition={{ duration: 0.5 }}
+          className={`text-4xl w-full text-center mb-10 text-white uppercase font-sans tracking-wider bg-gradient-to-r from-pink-300 via-cyan-500 to-purple-500 bg-clip-text text-transparent`}
+        >
+          Location
+        </motion.h1>
         <LocationCardDescription />
       </div>
       <div

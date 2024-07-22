@@ -102,9 +102,6 @@ export const ProductDetails2 = [
     photo:
       "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575955/AriserTradco/IMG-20240628-WA0003_ptm3ju.jpg",
   },
-];
-
-export const ProductDetails3 = [
   {
     id: 10,
     icon: "Know More",
@@ -140,9 +137,6 @@ export const ProductDetails3 = [
     photo:
       "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575954/AriserTradco/IMG-20240628-WA0018_pbjcoo.jpg",
   },
-];
-
-export const ProductDetails4 = [
   {
     id: 15,
     icon: "Know More",

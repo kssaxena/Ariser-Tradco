@@ -3,25 +3,30 @@ import { AuroraBackground } from "./ui/aurora-background";
 import Button from "./ui/Button";
 import { images } from "../assets/Images";
 import { RightCurve, LeftCurve } from "./ui/CurveForHero";
-import { ContactPopUp } from "./ProductPopUp";
+import { ContactPopUp, KnowMorePopup } from "./ProductPopUp";
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const Home = () => {
   // const navigate = useNavigate();
 
   const [showContactPopUp, setShowContactForm] = useState(false);
+  const [showKnowMore, setShowKnowMore] = useState(false);
 
-  const openGallery = () => {};
+  // const openGallery = () => {};
   return (
     <div
       id="home"
       className={` bg-[url('./src/assets/heroLandingphoto.png')] `}
     >
       <AuroraBackground className={`flex`}>
-        <section className={`flex justify-center items-center  w-full`}>
-          <div
-            className={`w-1/2 h-fit flex flex-col  text-white overflow-hidden `}
+        <section className={`flex justify-center items-center w-full`}>
+          <motion.div
+            initial={{ y: 100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className={`w-1/2 h-fit flex flex-col  text-white overflow-hidden lg:items-start`}
           >
             <div>
               <h1 className={`text-white text-3xl font-medium ml-20`}>
@@ -38,15 +43,27 @@ const Home = () => {
                 title={"Contact Us"}
                 onClick={() => setShowContactForm(true)}
               />
-              <Button title={"Our Products"} onClick={openGallery} />
+              <Button
+                title={"Know More"}
+                onClick={() => setShowKnowMore(true)}
+              />
             </div>
             {showContactPopUp && (
               <ContactPopUp onClose={() => setShowContactForm(false)} />
             )}
-          </div>
+
+            {showKnowMore && (
+              <KnowMorePopup onClose={() => setShowKnowMore(false)} />
+            )}
+          </motion.div>
           <div className={`lg:ml-auto xl:w-[38rem]  `}>
             <div className="relative left-1/4 flex w-[24rem] aspect-square border border-n-6 rounded-full -translate-x-1/2 scale:75 md:scale-100 backdrop-blur-sm">
-              <div className="flex w-60 aspect-square m-auto border border-n-6 rounded-full ">
+              <motion.div
+                initial={{ x: 100, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                className="flex w-60 aspect-square m-auto border border-n-6 rounded-full "
+              >
                 <div className="w-[6rem] aspect-square m-auto p-[0.2rem] bg-conic-gradient rounded-full">
                   <div className="flex items-center justify-center w-full h-full bg-n-8 rounded-full">
                     <img
@@ -58,11 +75,10 @@ const Home = () => {
                     />
                   </div>
                 </div>
-              </div>
+              </motion.div>
 
               <LeftCurve />
               <RightCurve />
-              {/* <BackgroundCircles/> */}
             </div>
           </div>
         </section>

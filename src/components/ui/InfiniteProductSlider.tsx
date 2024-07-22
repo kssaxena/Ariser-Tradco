@@ -3,6 +3,7 @@ import { cn } from "../../utils/cn";
 import React, { useEffect, useState } from "react";
 import Button from "./Button";
 import { useNavigate } from "react-router-dom";
+import { ProductSliderPopup } from "../ProductPopUp";
 
 export const InfiniteProductSlider = ({
   items,
@@ -12,7 +13,7 @@ export const InfiniteProductSlider = ({
   className,
 }: {
   items: {
-    id: number;
+    // id: number;
     photo: string;
     title: string;
     icon: string;
@@ -26,10 +27,7 @@ export const InfiniteProductSlider = ({
   const scrollerRef = React.useRef<HTMLUListElement>(null);
   const navigate = useNavigate();
 
-  function NavigateToProduct(id: number) {
-    navigate(`/productDescription/${id}`);
-    console.log(`Navigate to`);
-  }
+  const [showKnowMore, setShowKnowMore] = useState(false);
 
   useEffect(() => {
     addAnimation();
@@ -95,13 +93,13 @@ export const InfiniteProductSlider = ({
       >
         {items.map((item, index) => (
           <li
-            className="px-5 py-5  max-w-full relative rounded-2xl border shadow-sm shadow-black flex-shrink-0 border-gray-500  flex justify-center items-center "
+            className="px-5 py-5  max-w-full relative rounded-2xl border shadow-sm shadow-black flex-shrink-0 border-[#350537] flex justify-center items-center "
             // style={{
             //   background:
             //     "linear-gradient(180deg, var(--slate-800), var(--slate-900)",
             // }}
 
-            key={item.id}
+            // key={item.id}
           >
             <blockquote>
               <div
@@ -119,18 +117,23 @@ export const InfiniteProductSlider = ({
                   <span className=" text-sm leading-[1.6] text-gray-400 font-normal uppercase">
                     {item.title}
                   </span>
-                  <span className=" text-sm leading-[1.6] text-gray-400 font-normal">
+                  <div className=" text-sm leading-[1.6] text-gray-400 font-normal">
                     <Button
-                      title={item.icon}
-                      onClick={() => NavigateToProduct(item.id)}
+                      title={"Know More"}
+                      onClick={() => setShowKnowMore(true)}
                     />
-                  </span>
+                  </div>
                 </span>
               </div>
             </blockquote>
           </li>
         ))}
       </ul>
+      <div>
+        {showKnowMore && (
+          <ProductSliderPopup onClose={() => setShowKnowMore(false)} />
+        )}
+      </div>
     </div>
   );
 };

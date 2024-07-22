@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { useRef } from "react";
 import { X } from "lucide-react";
 import emailjs from "@emailjs/browser";
+import { Link } from "react-router-dom";
 
 const HeroHeaderContactForm = () => {
   const formRef = useRef();
@@ -23,6 +24,10 @@ const HeroHeaderContactForm = () => {
         [name]: value,
       };
     });
+  };
+
+  const isFormFilled = () => {
+    return Form.name !== "", Form.number !== "", Form.address !== "";
   };
 
   const handleSubmit = (e) => {
@@ -101,6 +106,7 @@ const HeroHeaderContactForm = () => {
         className="m-1 p-2 rounded-md backdrop-blur-xl bg-transparent border border-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-500 shadow-sm shadow-black focus:ring-offset-1 focus:ring-offset-black text-white"
       />
       <button
+        disabled={!isFormFilled()}
         onClick={handleSubmit}
         type="submit"
         className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-[#16C4E0] transition-colors focus:outline-none focus:ring-0 focus:ring-[#16C4E0] focus:ring-offset-1 focus:ring-offset-[#16C4E0] mt-20 mb-10"
@@ -170,4 +176,108 @@ const ContactPopUp = ({ onClose }) => {
   );
 };
 
-export { BookPopUp, ContactPopUp };
+const KnowMorePopup = ({ onClose }) => {
+  const modelRef = useRef();
+
+  const closeModel = (e) => {
+    if (modelRef.current === e.target) {
+      onClose();
+    }
+  };
+
+  return (
+    <div
+      ref={modelRef}
+      onClick={closeModel}
+      className="fixed inset-0 flex justify-center items-center z-50 top-[0vh] w-1/2 left-[50vh] backdrop-blur-md rounded-xl border p-2"
+    >
+      <div className="flex flex-col w-full items-center justify-center">
+        <button className="place-self-end" onClick={onClose}>
+          <X size={30} />
+        </button>
+        <div className=" rounded-xl w-3/4">
+          <h1 className="text-6xl text-center font-sans bg-gradient-to-r from-pink-300 via-cyan-500 to-purple-500 bg-clip-text tracking-tight text-transparent m-10">
+            ARISER TRADCO
+          </h1>
+          <p className="text-center w-full font-sans m-5 ">
+            Your Gateway to Premium Steel Doors
+          </p>
+          <p className=" m-5">
+            ARISER TRADCO is a leading supplier of premium steel doors in
+            Ranchi, Jharkhand, India. We are committed to providing our
+            customers with the highest quality doors that combine security,
+            style, and durability.
+          </p>
+          <p className=" m-5">
+            We offer a comprehensive selection of premium steel doors to suit
+            any residential or commercial need. Our doors are available in a
+            variety of styles, finishes, and configurations to perfectly
+            complement your existing architecture. Whether you're looking for a
+            sleek modern door, a classic entryway door, or a robust security
+            door, ARISER TRADCO has the perfect option for you.
+          </p>
+        </div>
+        <Link
+          to={`https://maps.app.goo.gl/fRSzw51VhKYzAs6FA`}
+          className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-[#16C4E0] transition-colors focus:outline-none focus:ring-0 focus:ring-[#16C4E0] focus:ring-offset-1 focus:ring-offset-[#16C4E0] m-10"
+        >
+          Visit our Outlet
+        </Link>
+      </div>
+    </div>
+  );
+};
+
+const ProductSliderPopup = ({ onClose }) => {
+  const modelRef = useRef();
+
+  const closeModel = (e) => {
+    if (modelRef.current === e.target) {
+      onClose();
+    }
+  };
+
+  return (
+    <div
+      ref={modelRef}
+      onClick={closeModel}
+      className="fixed inset-0 flex justify-center items-center z-50 top-[0vh] w-1/2 left-[50vh] backdrop-blur-md rounded-xl border p-2"
+    >
+      <div className="flex flex-col w-full items-center justify-center">
+        <button className="place-self-end" onClick={onClose}>
+          <X size={30} />
+        </button>
+        <div className=" rounded-xl w-3/4">
+          <h1 className="text-6xl text-center font-sans bg-gradient-to-r from-pink-300 via-cyan-500 to-purple-500 bg-clip-text tracking-tight text-transparent m-10">
+            ARISER TRADCO
+          </h1>
+          <p className="text-center w-full font-sans m-5 ">
+            Your Gateway to Premium Steel Doors
+          </p>
+          <p className=" m-5">
+            ARISER TRADCO is a leading supplier of premium steel doors in
+            Ranchi, Jharkhand, India. We are committed to providing our
+            customers with the highest quality doors that combine security,
+            style, and durability.
+          </p>
+          <p className=" m-5">
+            We offer a comprehensive selection of premium steel doors to suit
+            any residential or commercial need. Our doors are available in a
+            variety of styles, finishes, and configurations to perfectly
+            complement your existing architecture. Whether you're looking for a
+            sleek modern door, a classic entryway door, or a robust security
+            door, ARISER TRADCO has the perfect option for you.
+          </p>
+        </div>
+        <Link
+          to={`https://maps.app.goo.gl/fRSzw51VhKYzAs6FA`}
+          className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-[#16C4E0] transition-colors focus:outline-none focus:ring-0 focus:ring-[#16C4E0] focus:ring-offset-1 focus:ring-offset-[#16C4E0] m-10"
+        >
+          Visit our Outlet
+        </Link>
+      </div>
+    </div>
+  );
+};
+
+export { BookPopUp, ContactPopUp, KnowMorePopup, ProductSliderPopup };
