@@ -51,8 +51,8 @@ const ContactForm = () => {
 
     emailjs
       .send(
-        "service_8hkk28w",
-        "template_jrhai5k",
+        process.env.MAIN_CONTACT_FORM_SERVICE_KEY,
+        process.env.MAIN_CONTACT_FORM_TEMPLATE_KEY,
         {
           from_customer: form.customer,
           from_dealership: form.dealership,
@@ -64,7 +64,7 @@ const ContactForm = () => {
           to_name: "Ariser Tradco",
           // message: form.description,
         },
-        "sjT5W7tqglVjKont6"
+        process.env.MAIN_CONTACT_FORM_PUBLIC_KEY
       )
       .then(
         () => {

@@ -36,8 +36,8 @@ const HeroHeaderContactForm = () => {
 
     emailjs
       .send(
-        "service_8hkk28w",
-        "template_gvflzsu",
+        process.env.HERO_HEADER_FROM_SERVICE_KEY,
+        process.env.HERO_HEADER_FROM_TEMPLATE_KEY,
         {
           from_name: Form.name,
           from_number: Form.number,
@@ -46,7 +46,7 @@ const HeroHeaderContactForm = () => {
           to_name: "Ariser Tradco",
           // message: form.description,
         },
-        "sjT5W7tqglVjKont6"
+        process.env.HERO_HEADER_FROM_PUBLIC_KEY
       )
       .then(
         () => {
