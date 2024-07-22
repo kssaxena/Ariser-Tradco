@@ -6,12 +6,11 @@ import { motion } from "framer-motion";
 
 const LocationCardDescription = () => {
   return (
-    <div
-      className={`bg-[url('./src/assets/locationBG.png')] w-full h-[100%] flex `}
-    >
+    <div className={`w-full h-[100%] flex `}>
       <div
         className={`flex justify-around p-20 w-full backdrop-blur-sm shadow-inner shadow-black `}
       >
+        <div class="absolute inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
         <motion.section
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: -100 }}
