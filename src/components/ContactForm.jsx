@@ -33,19 +33,23 @@ const ContactForm = () => {
   };
 
   const isFormFilled = () => {
+    // console.log("isFormFilled");
     return (
-      form.customer !== "",
-      form.dealership !== "",
-      form.name !== "",
-      form.number !== "",
-      form.location !== "",
-      form.description !== ""
+      form.name.trim() !== "" &&
+      form.number !== "" &&
+      form.location.trim() !== "" &&
+      form.description.trim() !== ""
     );
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
+
+    if (form.number.length != 10) {
+      alert("Invalid Contact Number");
+      return;
+    }
 
     // template_jcen1o6
 
@@ -86,6 +90,8 @@ const ContactForm = () => {
           alert("Something went wrong. Try again later");
         }
       );
+
+    // alert("request submitted successfully");
   };
 
   return (
@@ -136,7 +142,7 @@ const ContactForm = () => {
           placeholder="Enter name"
           className={` lg:m-1 lg:p-5 p-3 text-sm lg:text-lg rounded-md backdrop-blur-xl bg-transparent border border-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-500 shadow-sm shadow-black focus:ring-offset-1 focus:ring-offset-black text-white`}
           type="name"
-          required
+          required={true}
         />
         <label
           className={`lg:m-2 lg:text-lg font-light text-white lg:pl-10 pl-3 m-2`}
@@ -153,7 +159,7 @@ const ContactForm = () => {
           placeholder="Your Contact Number"
           className={` lg:m-1 lg:p-5 p-3 text-sm lg:text-lg rounded-md backdrop-blur-xl bg-transparent border border-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-500 shadow-sm shadow-black focus:ring-offset-1 focus:ring-offset-black text-white`}
           type="number"
-          required
+          required={true}
         />
         <div className="flex flex-col">
           <label
@@ -164,12 +170,15 @@ const ContactForm = () => {
             Current Location
           </label>
           <select
+            required={true}
             name="location"
             value={form.location}
             onChange={handleChange}
             className={` lg:m-1 lg:p-5 p-3 text-sm lg:text-lg rounded-md backdrop-blur-xl bg-transparent border border-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-500 shadow-sm shadow-black focus:ring-offset-1 focus:ring-offset-black text-white`}
           >
-            <option className="bg-[#18181B]">Select</option>
+            {/* <option value={""} className="bg-[#18181B]">
+              Select
+            </option> */}
             <option value={"Ranchi"} className="bg-[#18181B]">
               Ranchi
             </option>
@@ -223,10 +232,13 @@ const ContactForm = () => {
           placeholder="Please describe your requirement and also provide Construction Site Address"
           className={` w-full h-40 m-1 p-5 rounded-md backdrop-blur-xl bg-transparent border border-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-500 shadow-sm shadow-black focus:ring-offset-1 focus:ring-offset-black text-white`}
           type="address"
-          required
+          required={true}
         />
         <button
-          disabled={!isFormFilled()}
+          disabled={() => {
+            // console.log("Function OK");
+            return !isFormFilled();
+          }}
           onClick={handleSubmit}
           type="submit"
           className="inline-flex lg:h-12 h-9 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] lg:px-6 px-2 lg:font-medium text-[#16C4E0] transition-colors focus:outline-none focus:ring-0 focus:ring-[#16C4E0] focus:ring-offset-1 focus:ring-offset-[#16C4E0] text-sm lg:mt-20 lg:mb-10 mt-5"

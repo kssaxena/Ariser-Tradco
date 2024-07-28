@@ -7,8 +7,21 @@ import { ContactPopUp, KnowMorePopup } from "./ProductPopUp";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { ChevronDown } from "lucide-react";
 
 const Home = () => {
+  const motionVariants = (duration) => ({
+    initial: { y: -10 },
+    animate: {
+      y: [10, -10],
+      transition: {
+        duration: duration,
+        ease: "linear",
+        repeat: Infinity,
+        repeatType: "reverse",
+      },
+    },
+  });
   // const navigate = useNavigate();
 
   const [showContactPopUp, setShowContactForm] = useState(false);
@@ -31,9 +44,7 @@ const Home = () => {
             className={`lg:w-1/2 h-fit flex flex-col justify-center items-center lg:justify-start lg:items-start  text-white overflow-hidden w-full`}
           >
             <div className=" w-full flex flex-col justify-center items-center lg:items-start lg:px-5 gap-5">
-              <h1
-                className={`text-white text-3xl font-medium lg:ml-20`}
-              >
+              <h1 className={`text-white text-3xl font-medium lg:ml-20`}>
                 Strength You Can Trust.
               </h1>
               <h1
@@ -61,6 +72,14 @@ const Home = () => {
             {showKnowMore && (
               <KnowMorePopup onClose={() => setShowKnowMore(false)} />
             )}
+          </motion.div>
+          <motion.div
+            variants={motionVariants(1)}
+            initial="initial"
+            animate="animate"
+            className="w-full h-50 w-50 flex justify-center items-center mt-10 lg:hidden"
+          >
+            <ChevronDown className="h-20 w-20 text-cyan-500" />
           </motion.div>
           <div className={`lg:ml-auto xl:w-[38rem] hidden lg:block `}>
             <div className="relative left-1/4 flex w-[24rem] aspect-square border border-n-6 rounded-full -translate-x-1/2 scale:75 md:scale-100 backdrop-blur-sm">

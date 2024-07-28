@@ -56,14 +56,18 @@ const About = () => {
             </motion.div>
           </LampContainer>
         </section>
-        <section className={`bg-[#020617] flex flex-col `}>
-          <h1 className={`text-xl font-light`}>Customer Reviews</h1>
-          <InfiniteMovingCards
-            items={testimonials}
-            direction="right"
-            speed="normal"
-          />
-        </section>
+        <div className="hidden lg:block">
+          <section className={`bg-[#020617] flex flex-col`}>
+            <h1 className={`text-xl font-light  text-center`}>
+              Customer Reviews
+            </h1>
+            <InfiniteMovingCards
+              items={testimonials}
+              direction="right"
+              speed="normal"
+            />
+          </section>
+        </div>
       </TracingBeam>
       <div className=" flex flex-col justify-center items-center gap-10 mt-20 ">
         <motion.h1
@@ -134,7 +138,7 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             initial={{ opacity: 0, x: 100 }}
             transition={{ duration: 0.5 }}
-            className="flex gap-8"
+            className="flex gap-8 flex-col lg:flex-row"
           >
             <motion.img
               variants={motionVariants(2.5)}

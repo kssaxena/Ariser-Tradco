@@ -6,7 +6,9 @@ import { Link } from "react-scroll";
 
 const Slider = () => {
   return (
-    <div className={` bg-gradient-to-b from-[#18181B] to-[#020718]`}>
+    <div
+      className={` bg-gradient-to-b from-[#18181B] to-[#020718] hidden lg:block`}
+    >
       <div
         id="gallery"
         className={` bg-[url('./src/assets/grid.png')] flex flex-col pt-20 justify-center items-center p-20`}

@@ -27,12 +27,22 @@ const HeroHeaderContactForm = () => {
   };
 
   const isFormFilled = () => {
-    return Form.name !== "", Form.number !== "", Form.address !== "";
+    // console.log("isFormFilled");
+    return (
+      Form.name.trim() !== "" &&
+      Form.number !== "" &&
+      Form.address.trim() !== ""
+    );
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
+
+    if (Form.number.length != 10) {
+      alert("Invalid Contact Number");
+      return;
+    }
 
     emailjs
       .send(
@@ -106,7 +116,10 @@ const HeroHeaderContactForm = () => {
         className="m-1 p-2 rounded-md backdrop-blur-xl bg-transparent border border-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-500 shadow-sm shadow-black focus:ring-offset-1 focus:ring-offset-black text-white"
       />
       <button
-        disabled={!isFormFilled()}
+        disabled={() => {
+          // console.log("Function OK");
+          return !isFormFilled();
+        }}
         onClick={handleSubmit}
         type="submit"
         className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-[#16C4E0] transition-colors focus:outline-none focus:ring-0 focus:ring-[#16C4E0] focus:ring-offset-1 focus:ring-offset-[#16C4E0] mt-20 mb-10"
@@ -137,7 +150,7 @@ const BookPopUp = ({ onClose }) => {
       onClick={closeModel}
       className="fixed inset-0 flex justify-center items-center z-50 top-[42vh] backdrop-blur-3xl bg-[#17171B] bg-opacity-85"
     >
-      <div className="flex flex-col bg-[#17171B] bg-opacity-85 w-full items-center justify-center">
+      <div className="flex flex-col bg-[#17171B] bg-opacity-100 w-full items-center justify-center h-screen">
         <button className="place-self-end" onClick={onClose}>
           <X size={30} />
         </button>
@@ -189,13 +202,13 @@ const KnowMorePopup = ({ onClose }) => {
     <div
       ref={modelRef}
       onClick={closeModel}
-      className="fixed inset-0 flex justify-center items-center z-50 top-[0vh] w-1/2 left-[50vh] backdrop-blur-md rounded-xl border p-2"
+      className="fixed inset-0 flex justify-center items-center z-50 top-[0vh] lg:w-1/2 lg:left-[50vh] backdrop-blur-md rounded-xl border p-2"
     >
       <div className="flex flex-col w-full items-center justify-center">
         <button className="place-self-end" onClick={onClose}>
           <X size={30} />
         </button>
-        <div className=" rounded-xl w-3/4">
+        <div className=" rounded-xl lg:w-3/4">
           <h1 className="text-6xl text-center font-sans bg-gradient-to-r from-pink-300 via-cyan-500 to-purple-500 bg-clip-text tracking-tight text-transparent m-10">
             ARISER TRADCO
           </h1>
