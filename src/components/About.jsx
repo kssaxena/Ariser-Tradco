@@ -43,11 +43,13 @@ const About = () => {
               transition={{ duration: 1.5 }}
               className={`flex flex-col justify-evenly items-center`}
             >
-              <h1 className={`text-center text-5xl w-3/4 uppercase font-sans `}>
+              <h1
+                className={`text-center lg:text-5xl text-3xl lg:w-3/4 uppercase font-sans `}
+              >
                 Invest in peace of mind
               </h1>
               <h1
-                className={`text-center font-light text-5xl w-full uppercase font-sans`}
+                className={`text-center font-light lg:text-5xl text-2xl w-full uppercase font-sans`}
               >
                 lasting durability with steel door.
               </h1>
@@ -63,54 +65,58 @@ const About = () => {
           />
         </section>
       </TracingBeam>
-      <div className=" flex flex-col justify-center items-center gap-10 mt-20">
+      <div className=" flex flex-col justify-center items-center gap-10 mt-20 ">
         <motion.h1
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: -100 }}
           transition={{ duration: 0.5 }}
-          className="uppercase text-3xl font-sans"
+          className="uppercase lg:text-3xl text-2xl font-sans"
         >
           Authorized Dealer of
         </motion.h1>
-        <section>
+        <section className="w-full flex justify-center items-center">
           <motion.div
             whileInView={{ opacity: 1, x: 0 }}
             initial={{ opacity: 0, x: 100 }}
             transition={{ duration: 0.5 }}
-            className="flex gap-8"
+            className="flex w-full lg:w-1/2"
           >
-            <motion.img
-              variants={motionVariants(2.5)}
-              initial="initial"
-              animate="animate"
-              src={DealerShip1}
-              alt="Advertisement"
-              className="w-32 h-32 rounded-full border-4 p-3 border-neutral-900"
-            />
-            <motion.img
-              variants={motionVariants(2)}
-              initial="initial"
-              animate="animate"
-              src={DealerShip2}
-              alt="Advertisement"
-              className="w-32 h-32 rounded-full border-4 p-3 border-neutral-900"
-            />
-            <motion.img
-              variants={motionVariants(1.5)}
-              initial="initial"
-              animate="animate"
-              src={DealerShip3}
-              alt="Advertisement"
-              className="w-32 h-32 rounded-full border-4 p-3 border-neutral-900"
-            />
-            <motion.img
-              variants={motionVariants(3)}
-              initial="initial"
-              animate="animate"
-              src={DealerShip4}
-              alt="Advertisement"
-              className="w-32 h-32 rounded-full border-4 p-3 border-neutral-900"
-            />
+            <div className="gap-8 flex flex-col justify-center items-center w-full h-full lg:flex-row ">
+              <motion.img
+                variants={motionVariants(2.5)}
+                initial="initial"
+                animate="animate"
+                src={DealerShip1}
+                alt="Advertisement"
+                className="w-32 h-32 rounded-full border-4 p-3 border-neutral-900"
+              />
+              <motion.img
+                variants={motionVariants(2)}
+                initial="initial"
+                animate="animate"
+                src={DealerShip2}
+                alt="Advertisement"
+                className="w-32 h-32 rounded-full border-4 p-3 border-neutral-900"
+              />
+            </div>
+            <div className="gap-8 flex flex-col justify-center items-center w-full h-full lg:flex-row ">
+              <motion.img
+                variants={motionVariants(1.5)}
+                initial="initial"
+                animate="animate"
+                src={DealerShip3}
+                alt="Advertisement"
+                className="w-32 h-32 rounded-full border-4 p-3 border-neutral-900"
+              />
+              <motion.img
+                variants={motionVariants(3)}
+                initial="initial"
+                animate="animate"
+                src={DealerShip4}
+                alt="Advertisement"
+                className="w-32 h-32 rounded-full border-4 p-3 border-neutral-900"
+              />
+            </div>
           </motion.div>
         </section>
       </div>
@@ -119,7 +125,7 @@ const About = () => {
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: -100 }}
           transition={{ duration: 0.5 }}
-          className="text-3xl font-sans"
+          className=" lg:text-3xl text-2xl font-sans"
         >
           Our Advertising Partners
         </motion.h1>

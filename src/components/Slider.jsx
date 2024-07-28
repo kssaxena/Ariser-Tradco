@@ -15,7 +15,7 @@ const Slider = () => {
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: -100 }}
           transition={{ duration: 1.5 }}
-          className={`text-6xl text-center font-sans bg-gradient-to-r from-pink-300 via-cyan-500 to-purple-500 bg-clip-text tracking-tight text-transparent m-10`}
+          className={`lg:text-6xl text-3xl text-center font-sans bg-gradient-to-r from-pink-300 via-cyan-500 to-purple-500 bg-clip-text tracking-tight text-transparent m-10`}
         >
           Have a look on our products...
         </motion.h1>

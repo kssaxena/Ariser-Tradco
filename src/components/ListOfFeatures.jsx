@@ -14,12 +14,12 @@ const ListOfFeatures = () => {
   return (
     <div className="bg-gradient-to-b from-[#020617] to-[#18181B]">
       <section
-        className={`flex flex-col justify-center items-center p-36 bg-gradient-to-b from-[#020617] to-[#18181B]`}
+        className={`flex flex-col justify-center items-center lg:p-36 pt-20 bg-gradient-to-b from-[#020617] to-[#18181B]`}
       >
-        <h1 className={`text-4xl font-light text-center uppercase`}>
+        <h1 className={`lg:text-4xl text-2xl p-3 lg:p-0 w-full font-light text-center uppercase`}>
           Few Highlighting Features of our product
         </h1>
-        <div className={`flex p-10  w-full justify-center items-center`}>
+        <div className={`flex flex-col lg:flex-row p-10 w-full justify-center items-center`}>
           <FeaturesCard
             // DelayDuration={0.5}
             Timeduration={1.5}
@@ -48,7 +48,7 @@ const ListOfFeatures = () => {
             }
           />
         </div>
-        <div className={`flex p-4 w-full justify-center items-center`}>
+        <div className={`flex flex-col lg:flex-row p-10 w-full justify-center items-center`}>
           <FeaturesCard
             // Timeduration={0.5}
             icon={<BugOff className={`h-20 w-20`} />}

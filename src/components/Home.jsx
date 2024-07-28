@@ -21,23 +21,29 @@ const Home = () => {
       className={` bg-[url('./src/assets/heroLandingphoto.png')] `}
     >
       <AuroraBackground className={`flex`}>
-        <section className={`flex justify-center items-center w-full`}>
+        <section
+          className={`flex flex-col lg:flex-row justify-center items-center w-full`}
+        >
           <motion.div
             initial={{ y: 100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            className={`w-1/2 h-fit flex flex-col  text-white overflow-hidden lg:items-start`}
+            className={`lg:w-1/2 h-fit flex flex-col justify-center items-center lg:justify-start lg:items-start  text-white overflow-hidden w-full`}
           >
-            <div>
-              <h1 className={`text-white text-3xl font-medium ml-20`}>
+            <div className=" w-full flex flex-col justify-center items-center lg:items-start lg:px-5 gap-5">
+              <h1
+                className={`text-white text-3xl font-medium lg:ml-20`}
+              >
                 Strength You Can Trust.
               </h1>
-              <h1 className={`text-white text-5xl font-medium ml-20`}>
+              <h1
+                className={`text-white lg:text-5xl text-lg font-medium lg:ml-20`}
+              >
                 Doors That Last..
               </h1>
             </div>
             <div
-              className={`flex justify-evenly items-center w-1/2 z-10 ml-10 mt-8  p-1`}
+              className={`w-full flex justify-evenly items-center lg:w-1/2 z-10 lg:ml-14 mt-8 p-1`}
             >
               <Button
                 title={"Contact Us"}
@@ -56,7 +62,7 @@ const Home = () => {
               <KnowMorePopup onClose={() => setShowKnowMore(false)} />
             )}
           </motion.div>
-          <div className={`lg:ml-auto xl:w-[38rem]  `}>
+          <div className={`lg:ml-auto xl:w-[38rem] hidden lg:block `}>
             <div className="relative left-1/4 flex w-[24rem] aspect-square border border-n-6 rounded-full -translate-x-1/2 scale:75 md:scale-100 backdrop-blur-sm">
               <motion.div
                 initial={{ x: 100, opacity: 0 }}

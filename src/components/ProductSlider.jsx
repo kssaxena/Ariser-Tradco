@@ -12,7 +12,7 @@ const ProductSlider = () => {
           className={`text-white  pt-24 bg-transparent  flex flex-col justify-center items-center text-4xl`}
         >
           {/* <h1>bg-[url('./src/assets/grid.png')]</h1> */}
-          <h1 className={`text-4xl font-light `}>Showcased Products</h1>
+          <h1 className={`lg:text-4xl text-2xl font-light `}>Showcased Products</h1>
           <div>
             <InfiniteProductSlider
               items={ProductDetails1}
@@ -20,7 +20,7 @@ const ProductSlider = () => {
               speed="slow"
             />
           </div>
-          <div>
+          <div className="hidden lg:block">
             <InfiniteProductSlider
               items={ProductDetails2}
               direction="left"

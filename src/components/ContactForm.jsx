@@ -90,7 +90,7 @@ const ContactForm = () => {
 
   return (
     <div
-      className={`flex flex-col justify-center items-center w-full  rounded-lg`}
+      className={`flex flex-col justify-center items-center w-full rounded-lg`}
     >
       <form
         ref={formRef}
@@ -99,7 +99,7 @@ const ContactForm = () => {
       >
         <div className={`text-white flex justify-evenly items-center`}>
           <label
-            className={` flex w-[20%] justify-evenly rounded-xl p-2 border border-gray-500 backdrop-blur-xl shadow-md shadow-black `}
+            className={`sm:block hidden lg:w-[20%] justify-evenly rounded-xl p-2 border border-gray-500 backdrop-blur-xl shadow-md shadow-black  text-xs `}
           >
             <input
               className={` mr-2 `}
@@ -109,12 +109,11 @@ const ContactForm = () => {
             />
             Customer
           </label>
-          or
           <label
-            className={` flex w-[40%] justify-evenly rounded-xl p-2 border border-gray-500 backdrop-blur-xl shadow-md shadow-black`}
+            className={`sm:block hidden lg:w-[40%] justify-evenly rounded-xl p-2 border border-gray-500 backdrop-blur-xl shadow-md shadow-black text-xs  `}
           >
             <input
-              className={` mr-2  `}
+              className={` mr-2 `}
               type="checkbox"
               value={form.dealership}
               onChange={handleChange}
@@ -123,7 +122,7 @@ const ContactForm = () => {
           </label>
         </div>
         <label
-          className={`m-2 text-lg font-light text-white pl-10`}
+          className={`lg:m-2 lg:text-lg font-light text-white lg:pl-10 pl-3 m-2`}
           htmlFor="name"
           id="name"
         >
@@ -135,12 +134,12 @@ const ContactForm = () => {
           onChange={handleChange}
           id="name"
           placeholder="Enter name"
-          className={` m-1 p-5 rounded-md backdrop-blur-xl bg-transparent border border-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-500 shadow-sm shadow-black focus:ring-offset-1 focus:ring-offset-black text-white`}
+          className={` lg:m-1 lg:p-5 p-3 text-sm lg:text-lg rounded-md backdrop-blur-xl bg-transparent border border-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-500 shadow-sm shadow-black focus:ring-offset-1 focus:ring-offset-black text-white`}
           type="name"
           required
         />
         <label
-          className={`m-2 text-lg font-light text-white pl-10`}
+          className={`lg:m-2 lg:text-lg font-light text-white lg:pl-10 pl-3 m-2`}
           htmlFor="number"
           id="number"
         >
@@ -152,13 +151,13 @@ const ContactForm = () => {
           onChange={handleChange}
           id="number"
           placeholder="Your Contact Number"
-          className={` m-1 p-5 rounded-md backdrop-blur-xl bg-transparent border border-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-500 shadow-sm shadow-black focus:ring-offset-1 focus:ring-offset-black text-white`}
+          className={` lg:m-1 lg:p-5 p-3 text-sm lg:text-lg rounded-md backdrop-blur-xl bg-transparent border border-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-500 shadow-sm shadow-black focus:ring-offset-1 focus:ring-offset-black text-white`}
           type="number"
           required
         />
         <div className="flex flex-col">
           <label
-            className={`m-2 text-lg font-light text-white pl-10`}
+            className={`lg:m-2 lg:text-lg font-light text-white lg:pl-10 pl-3 m-2`}
             htmlFor="location"
             id="address"
           >
@@ -168,7 +167,7 @@ const ContactForm = () => {
             name="location"
             value={form.location}
             onChange={handleChange}
-            className={` m-1 p-5 rounded-md backdrop-blur-xl bg-transparent border border-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-500 shadow-sm shadow-black focus:ring-offset-1 focus:ring-offset-black text-white`}
+            className={` lg:m-1 lg:p-5 p-3 text-sm lg:text-lg rounded-md backdrop-blur-xl bg-transparent border border-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-500 shadow-sm shadow-black focus:ring-offset-1 focus:ring-offset-black text-white`}
           >
             <option className="bg-[#18181B]">Select</option>
             <option value={"Ranchi"} className="bg-[#18181B]">
@@ -210,7 +209,7 @@ const ContactForm = () => {
           </select>
         </div>
         <label
-          className={`m-2 text-lg font-light text-white pl-10`}
+          className={`lg:m-2 lg:text-lg font-light text-white lg:pl-10 pl-3 m-2`}
           htmlFor="description"
           id="address"
         >
@@ -230,7 +229,7 @@ const ContactForm = () => {
           disabled={!isFormFilled()}
           onClick={handleSubmit}
           type="submit"
-          className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-[#16C4E0] transition-colors focus:outline-none focus:ring-0 focus:ring-[#16C4E0] focus:ring-offset-1 focus:ring-offset-[#16C4E0] mt-20 mb-10"
+          className="inline-flex lg:h-12 h-9 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] lg:px-6 px-2 lg:font-medium text-[#16C4E0] transition-colors focus:outline-none focus:ring-0 focus:ring-[#16C4E0] focus:ring-offset-1 focus:ring-offset-[#16C4E0] text-sm lg:mt-20 lg:mb-10 mt-5"
         >
           {loading ? "Sending..." : "Send"}
         </button>

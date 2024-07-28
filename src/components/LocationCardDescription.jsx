@@ -8,14 +8,14 @@ const LocationCardDescription = () => {
   return (
     <div className={`w-full h-[100%] flex `}>
       <div
-        className={`flex justify-around p-20 w-full backdrop-blur-sm shadow-inner shadow-black `}
+        className={`flex lg:justify-around justify-center p-20 w-full backdrop-blur-sm shadow-inner shadow-black `}
       >
         <div class="absolute inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
         <motion.section
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: -100 }}
           transition={{ duration: 1 }}
-          className={`text-black w-fit flex flex-col justify-center shadow-[0_8px_16px_rgb(0_0_0/0.4)] rounded-lg p-10 bg-[url('./src/assets/gradient.png')] backdrop-blur`}
+          className={`hidden lg:block text-black w-fit flex flex-col justify-center shadow-[0_8px_16px_rgb(0_0_0/0.4)] rounded-lg p-10 bg-[url('./src/assets/gradient.png')] backdrop-blur`}
         >
           <h1
             className={`relative right-0 flex w-full text-5xl uppercase font-sans`}
@@ -37,7 +37,7 @@ const LocationCardDescription = () => {
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: 100 }}
           transition={{ duration: 1 }}
-          className={` w-1/4 flex justify-center items-center pl-20 `}
+          className={` lg:w-1/4 flex justify-center items-center lg:pl-20 `}
         >
           <PinContainer
             title="Location"

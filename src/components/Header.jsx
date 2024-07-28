@@ -18,13 +18,13 @@ const Header = () => {
   };
   return (
     <div
-      className={`flex justify-center items-center fixed w-full p-5 top-0 left-0 z-50 text-white  backdrop-blur-lg shadow-sm shadow-black `}
+      className={`flex justify-center items-center fixed w-full lg:p-5 p-2 top-0 left-0 z-50 text-white  backdrop-blur-lg shadow-sm shadow-black `}
     >
       <motion.section
         initial={{ x: -100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.5 }}
-        className={`logo w-[60%] flex items-center pl-28`}
+        className={`logo lg:w-[60%] w-3/4 flex items-center lg:pl-28 `}
       >
         <img
           src={images[1].url}
@@ -35,23 +35,25 @@ const Header = () => {
         />
         <h1>ARISER TRADCO</h1>
       </motion.section>
-      <section className={`navbar w-[40%] flex justify-evenly items-center `}>
-        {NavigationElements.map((item) => (
-          <a
-            className={`w-fit text-lg uppercase cursor-pointer hover:font-medium hover:scale-110 ease-in-out duration-200 border pr-4 border-b-0 border-t-0 border-l-0 `}
-            key={item.id}
-            href={item.url}
-            onClick={handleClick}
-          >
-            {item.title}
-          </a>
-        ))}
-      </section>
+      <div className="hidden lg:block justify-evenly items-center">
+        <section className={`navbar w-[40%] flex justify-evenly items-center`}>
+          {NavigationElements.map((item) => (
+            <a
+              className={`w-fit text-lg uppercase cursor-pointer hover:font-medium hover:scale-110 ease-in-out duration-200 pr-4`}
+              key={item.id}
+              href={item.url}
+              onClick={handleClick}
+            >
+              {item.title}
+            </a>
+          ))}
+        </section>
+      </div>
       <motion.section
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.5 }}
-        className={`flex justify-center items-center w-[10%]`}
+        className={`flex justify-center items-center lg:w-[10%] w-1/4`}
       >
         <Button title={"Book Now"} onClick={() => setShowContactForm(true)} />
       </motion.section>

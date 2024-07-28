@@ -69,7 +69,7 @@ const HeroHeaderContactForm = () => {
 
   return (
     <form ref={formRef} className="flex flex-col">
-      <h1 className="w-full justify-center items-center flex mb-10 text-lg">
+      <h1 className="w-full justify-center items-center flex mb-10 lg:text-lg">
         Enter details so that our Tech team can reach you !
       </h1>
       <label className="m-1 ">Name</label>
@@ -135,13 +135,13 @@ const BookPopUp = ({ onClose }) => {
     <div
       ref={modelRef}
       onClick={closeModel}
-      className="fixed inset-0 flex justify-center items-center z-50 top-[50vh] backdrop-blur-3xl bg-[#17171B] bg-opacity-85"
+      className="fixed inset-0 flex justify-center items-center z-50 top-[42vh] backdrop-blur-3xl bg-[#17171B] bg-opacity-85"
     >
       <div className="flex flex-col bg-[#17171B] bg-opacity-85 w-full items-center justify-center">
         <button className="place-self-end" onClick={onClose}>
           <X size={30} />
         </button>
-        <div className=" rounded-xl w-1/2">
+        <div className=" rounded-xl lg:w-1/2 w-[90%]">
           <HeroHeaderContactForm />
         </div>
       </div>
@@ -162,7 +162,7 @@ const ContactPopUp = ({ onClose }) => {
     <div
       ref={modelRef}
       onClick={closeModel}
-      className="fixed inset-0 flex justify-center items-center z-50 top-[0vh] w-1/2 left-[50vh] backdrop-blur-md rounded-xl "
+      className="fixed inset-0 flex justify-center items-center z-50 top-[0vh] lg:w-1/2 lg:left-[50vh] backdrop-blur-md rounded-xl "
     >
       <div className="flex flex-col w-full items-center justify-center">
         <button className="place-self-end" onClick={onClose}>
