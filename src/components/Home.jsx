@@ -5,7 +5,7 @@ import { images } from "../assets/Images";
 import { RightCurve, LeftCurve } from "./ui/CurveForHero";
 import { ContactPopUp, KnowMorePopup } from "./ProductPopUp";
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
 
@@ -31,83 +31,53 @@ const Home = () => {
   return (
     <div
       id="home"
-      className={` bg-[url('./src/assets/heroLandingphoto.png')] `}
+      className={` bg-[url('./src/assets/heroLandingphoto.png')] inset-shadow-lg inset-shadow-black `}
     >
-      <AuroraBackground className={`flex`}>
-        <section
-          className={`flex flex-col lg:flex-row justify-center items-center w-full`}
+      <section className={`flex flex-col lg:w-full lg:h-screen h-96 `}>
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          className={`flex flex-col justify-center items-start text-white overflow-hidden w-full h-full `}
         >
-          <motion.div
-            initial={{ y: 100, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-            className={`lg:w-1/2 h-fit flex flex-col justify-center items-center lg:justify-start lg:items-start  text-white overflow-hidden w-full`}
-          >
-            <div className=" w-full flex flex-col justify-center items-center lg:items-start lg:px-5 gap-5">
-              <h1 className={`text-white text-3xl font-medium lg:ml-20`}>
-                Strength You Can Trust.
-              </h1>
-              <h1
-                className={`text-white lg:text-5xl text-lg font-medium lg:ml-20`}
-              >
-                Doors That Last..
-              </h1>
-            </div>
-            <div
-              className={`w-full flex justify-evenly items-center lg:w-1/2 z-10 lg:ml-14 mt-8 p-1`}
-            >
-              <Button
-                title={"Contact Us"}
-                onClick={() => setShowContactForm(true)}
-              />
-              <Button
-                title={"Know More"}
-                onClick={() => setShowKnowMore(true)}
-              />
-            </div>
-            {showContactPopUp && (
-              <ContactPopUp onClose={() => setShowContactForm(false)} />
-            )}
-
-            {showKnowMore && (
-              <KnowMorePopup onClose={() => setShowKnowMore(false)} />
-            )}
-          </motion.div>
-          <motion.div
-            variants={motionVariants(1)}
-            initial="initial"
-            animate="animate"
-            className="w-full h-50 w-50 flex justify-center items-center mt-10 lg:hidden"
-          >
-            <ChevronDown className="h-20 w-20 text-cyan-500" />
-          </motion.div>
-          <div className={`lg:ml-auto xl:w-[38rem] hidden lg:block `}>
-            <div className="relative left-1/4 flex w-[24rem] aspect-square border border-n-6 rounded-full -translate-x-1/2 scale:75 md:scale-100 backdrop-blur-sm">
-              <motion.div
-                initial={{ x: 100, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="flex w-60 aspect-square m-auto border border-n-6 rounded-full "
-              >
-                <div className="w-[6rem] aspect-square m-auto p-[0.2rem] bg-conic-gradient rounded-full">
-                  <div className="flex items-center justify-center w-full h-full bg-n-8 rounded-full">
-                    <img
-                      src={images[1].url}
-                      className={`rounded-full`}
-                      width={100}
-                      height={100}
-                      alt="ariser_tradco"
-                    />
-                  </div>
-                </div>
-              </motion.div>
-
-              <LeftCurve />
-              <RightCurve />
-            </div>
+          <div className="  flex flex-col justify-end items-end lg:w-1/3 w-full font-Megrim font-semibold ">
+            <h1 className={`text-white text-3xl font-medium `}>
+              Strength You Can Trust.
+            </h1>
+            <h1 className={`text-white lg:text-5xl text-lg font-medium `}>
+              Doors That Last..
+            </h1>
           </div>
-        </section>
-      </AuroraBackground>
+          <div
+            className={` flex justify-end items-end lg:w-1/3 w-full gap-10 py-5`}
+          >
+            {/* <Button title={""} /> */}
+            {/* <button
+              className="border-b hover:scale-105 duration-300 ease-in-out"
+              onClick={() => setShowContactForm(true)}
+            >
+              Contact Us
+            </button> */}
+            <button
+              className="border-b hover:scale-105 duration-300 ease-in-out"
+              onClick={() => setShowKnowMore(true)}
+            >
+              Gallery
+            </button>
+            {/* <Button title={"Know More"} onClick={() => setShowKnowMore(true)} /> */}
+          </div>
+        </motion.div>
+      </section>
+      {/* <AuroraBackground className={`flex`}>
+      </AuroraBackground> */}
+      {showContactPopUp && (
+        <ContactPopUp onClose={() => setShowContactForm(false)} />
+      )}
+      <AnimatePresence>
+        {showKnowMore && (
+          <KnowMorePopup onClose={() => setShowKnowMore(false)} />
+        )}
+      </AnimatePresence>
     </div>
   );
 };

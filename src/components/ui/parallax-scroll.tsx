@@ -35,7 +35,7 @@ export const ParallaxScroll = ({
   return (
     <div
       className={cn(
-        "lg:h-[40rem] items-start overflow-y-auto lg:w-3/4 border border-t-0 border-r-0 border-b-0  border-neutral-900 ",
+        "lg:h-[40rem] items-start overflow-y-auto lg:w-3/4 border-l-0 border-t-0 border-r-0 border-b-0  border-neutral-900 ",
         className
       )}
       ref={gridRef}
@@ -53,7 +53,7 @@ export const ParallaxScroll = ({
             >
               <img
                 src={el}
-                className="h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0"
+                className="h-fit w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0"
                 height="400"
                 width="400"
                 alt="thumbnail"
@@ -66,7 +66,7 @@ export const ParallaxScroll = ({
             <motion.div style={{ y: translateSecond }} key={"grid-2" + idx}>
               <img
                 src={el}
-                className="h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0"
+                className="h-fit w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0"
                 height="400"
                 width="400"
                 alt="thumbnail"
@@ -79,7 +79,7 @@ export const ParallaxScroll = ({
             <motion.div style={{ y: translateThird }} key={"grid-3" + idx}>
               <img
                 src={el}
-                className="h-80 w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0"
+                className="h-fit w-full object-cover object-left-top rounded-lg gap-10 !m-0 !p-0"
                 height="400"
                 width="400"
                 alt="thumbnail"

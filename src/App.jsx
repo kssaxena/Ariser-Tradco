@@ -10,7 +10,7 @@ import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="overflow-hidden">
+    <div className="overflow-hidden font-Fredoka">
       <Header />
       <Home />
       <Slider />

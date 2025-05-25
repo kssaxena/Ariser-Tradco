@@ -59,6 +59,11 @@ export default {
           },
         },
       },
+      fontFamily: {
+        Megrim: ["Megrim"],
+        Caveat: ["Caveat"],
+        Fredoka: ["Fredoka"],
+      },
     },
   },
   plugins: [
