@@ -23,10 +23,15 @@ const Header = () => {
   };
   return (
     <div
-      className={`flex justify-around items-center fixed w-full lg:p-5 p-2 top-0 left-0 z-50 text-white   `}
+      className={`flex justify-around items-center fixed w-full lg:p-5 p-2 top-0 left-0 z-50 text-white bg-black/30`}
     >
       <div className="hidden lg:block justify-evenly items-center">
-        <section className={`navbar w-[40%] flex justify-evenly items-center`}>
+        <motion.section
+          initial={{ x: -100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          className={`navbar w-[40%] flex justify-evenly items-center `}
+        >
           {NavigationElements.map((item) => (
             <a
               className={`w-fit text-lg  cursor-pointer hover:font-medium hover:scale-110 ease-in-out duration-200 pr-4 `}
@@ -37,7 +42,7 @@ const Header = () => {
               {item.title}
             </a>
           ))}
-        </section>
+        </motion.section>
       </div>
       <motion.section
         initial={{ x: -100, opacity: 0 }}
@@ -60,12 +65,12 @@ const Header = () => {
         transition={{ duration: 0.5, delay: 0.5 }}
         className={`flex justify-center items-center lg:gap-5 gap-2 `}
       >
-        <button
+        {/* <button
           onClick={() => setShowContactForm(true)}
           className="border-b hover:scale-105 duration-300 ease-in-out lg:flex hidden"
         >
           Book Now
-        </button>
+        </button> */}
         <a
           href="tel:+91620365007"
           className=" hover:scale-105 duration-300 ease-in-out"
@@ -102,11 +107,11 @@ const Header = () => {
           <IoLogoWhatsapp className="text-2xl " />
         </a>
       </motion.section>
-      <AnimatePresence>
+      {/* <AnimatePresence>
         {showContactPopUp && (
           <BookPopUp onClose={() => setShowContactForm(false)} />
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
     </div>
   );
 };

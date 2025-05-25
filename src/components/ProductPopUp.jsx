@@ -138,7 +138,7 @@ const HeroHeaderContactForm = () => {
         {/* <ContactForm /> */}
       </form>
       <h1 className="w-full justify-center items-center flex mb-10 text-lg gap-5">
-        Or you can directly reach us at :
+        Directly reach us at :
         {/* <p className="text-blue-500 m-5 underline">ariserstradco@gmail.com</p> */}
         <a href="tel:+91620365007">
           <FaPhoneAlt className="text-2xl " />
@@ -187,7 +187,7 @@ const BookPopUp = ({ onClose }) => {
       transition={{ duration: 0.5, ease: "easeInOut" }}
       ref={modelRef}
       onClick={closeModel}
-      className="fixed inset-0 flex justify-center items-center z-50 top-0 backdrop-blur-3xl  bg-opacity-85"
+      className="fixed inset-0 flex justify-center items-center z-50 top-0 backdrop-blur-3xl bg-black/50 bg-opacity-85 text-white"
     >
       <div className="flex flex-col w-full items-center justify-center h-screen">
         <button className="place-self-end" onClick={onClose}>

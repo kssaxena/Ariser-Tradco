@@ -63,6 +63,7 @@ export default {
         Megrim: ["Megrim"],
         Caveat: ["Caveat"],
         Fredoka: ["Fredoka"],
+        Cinzel: ["Cinzel"],
       },
     },
   },

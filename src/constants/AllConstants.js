@@ -22,9 +22,9 @@ export const footer = [Facebook, Instagram, Youtube];
 
 export const NavigationElements = [
   { id: "0", title: "Home", url: "#home" },
+  { id: "3", title: "Gallery", url: "#gallery" },
   { id: "1", title: "Products", url: "#products_slider" },
   { id: "2", title: "About", url: "#about" },
-  { id: "3", title: "Gallery", url: "#gallery" },
   { id: "4", title: "Contact", url: "#contact" },
 ];
 
@@ -287,5 +287,28 @@ export const collabApps = [
     icon: raindrop,
     width: 38,
     height: 38,
+  },
+];
+
+export const ProductPicture = [
+  {
+    id: "0",
+    title: "Delivery",
+    image: "./src/assets/ProductCard1.png",
+  },
+  {
+    id: "1",
+    title: "Installation",
+    image: "./src/assets/ProductCard2.png",
+  },
+  {
+    id: "2",
+    title: "Maintenance",
+    image: "./src/assets/ProductCard3.png",
+  },
+  {
+    id: "3",
+    title: "Durability",
+    image: "./src/assets/ProductCard1.png",
   },
 ];

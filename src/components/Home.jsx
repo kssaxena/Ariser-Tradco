@@ -3,7 +3,7 @@ import { AuroraBackground } from "./ui/aurora-background";
 import Button from "./ui/Button";
 import { images } from "../assets/Images";
 import { RightCurve, LeftCurve } from "./ui/CurveForHero";
-import { ContactPopUp, KnowMorePopup } from "./ProductPopUp";
+import { BookPopUp, ContactPopUp, KnowMorePopup } from "./ProductPopUp";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -52,12 +52,12 @@ const Home = () => {
             className={` flex justify-end items-end lg:w-1/3 w-full gap-10 py-5`}
           >
             {/* <Button title={""} /> */}
-            {/* <button
-              className="border-b hover:scale-105 duration-300 ease-in-out"
+            <button
               onClick={() => setShowContactForm(true)}
+              className="border-b hover:scale-105 duration-300 ease-in-out lg:flex hidden"
             >
-              Contact Us
-            </button> */}
+              Book Now
+            </button>
             <button
               className="border-b hover:scale-105 duration-300 ease-in-out"
               onClick={() => setShowKnowMore(true)}
@@ -70,12 +70,17 @@ const Home = () => {
       </section>
       {/* <AuroraBackground className={`flex`}>
       </AuroraBackground> */}
-      {showContactPopUp && (
+      {/* {showContactPopUp && (
         <ContactPopUp onClose={() => setShowContactForm(false)} />
-      )}
+      )} */}
       <AnimatePresence>
         {showKnowMore && (
           <KnowMorePopup onClose={() => setShowKnowMore(false)} />
+        )}
+      </AnimatePresence>
+      <AnimatePresence>
+        {showContactPopUp && (
+          <BookPopUp onClose={() => setShowContactForm(false)} />
         )}
       </AnimatePresence>
     </div>
