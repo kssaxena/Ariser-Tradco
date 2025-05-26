@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { NavigationElements } from "../constants/AllConstants";
 import Button from "./ui/Button";
 import { images } from "../assets/Images";
@@ -11,10 +11,32 @@ import { FiInstagram } from "react-icons/fi";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { BiLogoGmail } from "react-icons/bi";
 import { FaPhoneAlt } from "react-icons/fa";
+import { useLocation } from "react-router-dom";
 
 const Header = () => {
   const [showContactPopUp, setShowContactForm] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const headerBgClass =
+    location.hash === "#home" || !isScrolled ? "" : "bg-black/30";
   const handleClick = () => {
     if (!openNavigation) return;
 
@@ -23,7 +45,10 @@ const Header = () => {
   };
   return (
     <div
-      className={`flex justify-around items-center fixed w-full lg:p-5 p-2 top-0 left-0 z-50 text-white bg-black/30`}
+      // className={`flex justify-around items-center fixed w-full lg:p-5 p-2 top-0 left-0 z-50 text-white ${
+      //   location.hash === "#home" ? "" : "bg-black/30"
+      // }`}
+      className={`flex justify-around items-center fixed w-full lg:p-5 p-2 top-0 left-0 z-50 text-white ${headerBgClass}`}
     >
       <div className="hidden lg:block justify-evenly items-center">
         <motion.section

@@ -17,21 +17,21 @@ import {
 // import { motion } from "framer-motion";
 
 const About = () => {
-  const motionVariants = (duration) => ({
-    initial: { y: -10 },
-    animate: {
-      y: [10, -10],
-      transition: {
-        duration: duration,
-        ease: "linear",
-        repeat: Infinity,
-        repeatType: "reverse",
-      },
-    },
-  });
+  // const motionVariants = (duration) => ({
+  //   initial: { y: -10 },
+  //   animate: {
+  //     y: [10, -10],
+  //     transition: {
+  //       duration: duration,
+  //       ease: "linear",
+  //       repeat: Infinity,
+  //       repeatType: "reverse",
+  //     },
+  //   },
+  // });
 
   return (
-    <div id="about" className={`text-white bg-[#020617]`}>
+    <div id="gallery" className={`text-white bg-[#020617]`}>
       <TracingBeam>
         <section className="h-fit">
           <LampContainer
@@ -69,7 +69,7 @@ const About = () => {
           </section>
         </div>
       </TracingBeam>
-      <div className=" flex flex-col justify-center items-center gap-10 mt-20 ">
+      {/* <div className=" flex flex-col justify-center items-center gap-10 mt-20 ">
         <motion.h1
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: -100 }}
@@ -166,7 +166,7 @@ const About = () => {
             />
           </motion.div>
         </section>
-      </div>
+      </div> */}
       <ListOfFeatures />
     </div>
   );

@@ -2,7 +2,6 @@ import React from "react";
 import { AuroraBackground } from "./ui/aurora-background";
 import Button from "./ui/Button";
 import { images } from "../assets/Images";
-import { RightCurve, LeftCurve } from "./ui/CurveForHero";
 import { BookPopUp, ContactPopUp, KnowMorePopup } from "./ProductPopUp";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
