@@ -82,7 +82,7 @@ const Header = () => {
           height={60}
           alt="ariser_tradco"
         />
-        <h1>ARISER TRADCO</h1>
+        <h1 className="lg:flex hidden ">ARISER TRADCO</h1>
       </motion.section>
       <motion.section
         initial={{ y: -100, opacity: 0 }}
@@ -115,7 +115,7 @@ const Header = () => {
           target="_blank"
           className=" hover:scale-105 duration-300 ease-in-out"
         >
-          <FaLocationDot className="text-2xl lg:flex hidden " />
+          <FaLocationDot className="text-2xl " />
         </a>
         <a
           href="https://www.instagram.com/arisertradco?igsh=Zm5uYWFuamYxNG45"
