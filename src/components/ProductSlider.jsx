@@ -5,6 +5,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { X } from "lucide-react";
 import CountUp from "react-countup";
 import ScrollTrigger from "react-scroll-trigger";
+import { Carousel, Card } from "./ui/apple-cards-carousel";
+import { ProductCardSlider } from "../constants/AllConstants";
 
 const ProductSlider = () => {
   const [openModel, setOpenModel] = useState(false);
@@ -45,7 +47,7 @@ const ProductSlider = () => {
               {count && (
                 <CountUp start={0} end={BackGround} duration={2} delay={0} />
               )}
-            </ScrollTrigger> 
+            </ScrollTrigger>
           </h1>
         </div>
         <div className=" flex flex-col items-center font-Megrim  ">
@@ -57,9 +59,54 @@ const ProductSlider = () => {
     );
   };
 
+  const DummyContent = () => {
+    return (
+      <>
+        {[...new Array(3).fill(1)].map((_, index) => {
+          return (
+            <div
+              key={"dummy-content" + index}
+              className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4"
+            >
+              <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
+                <span className="font-bold text-neutral-700 dark:text-neutral-200">
+                  The first rule of Apple club is that you boast about Apple
+                  club.
+                </span>{" "}
+                Keep a journal, quickly jot down a grocery list, and take
+                amazing class notes. Want to convert those notes to text? No
+                problem. Langotiya jeetu ka mara hua yaar is ready to capture
+                every thought.
+              </p>
+              <img
+                src="https://assets.aceternity.com/macbook.png"
+                alt="Macbook mockup from Aceternity UI"
+                height="500"
+                width="500"
+                className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain"
+              />
+            </div>
+          );
+        })}
+      </>
+    );
+  };
+
+  function AppleCardsCarouselDemo() {
+    const cards = ProductCardSlider.map((card, index) => (
+      <Card key={card.src} card={card} index={index} />
+    ));
+
+    return (
+      <div className="w-full h-full">
+        <Carousel items={cards} />
+      </div>
+    );
+  }
+
   return (
     <div id="products_slider" className="bg-[#DEDFD8]">
-      <div className="h-fit w-full lg:pt-24 ">
+      <div className="h-fit w-full lg:pt-24 lg:pb-20 ">
         <div className="flex lg:flex-row flex-col">
           <h1
             className={`lg:text-6xl text-3xl font-Cinzel mt-10 tracking-wide lg:px-20 px-5 lg:w-3/4 w-full`}
@@ -93,7 +140,7 @@ const ProductSlider = () => {
             </button>
           </h1>
         </div>
-        <div className="flex lg:flex-row flex-col justify-evenly items-center gap-10 lg:py-20 pb-20 select-none">
+        <div className="flex lg:flex-row flex-col justify-evenly items-center gap-10 lg:pt-20 select-none pb-10 lg:pb-20">
           {AchievementCardData.map((item) => (
             <AchievementCard BackGround={item.background} Front={item.front} />
           ))}
@@ -155,6 +202,9 @@ const ProductSlider = () => {
             </motion.div>
           )}
         </AnimatePresence>
+        <div className=" border-r border-black ml-10 mb-10 border-2 rounded-s-2xl rounded-r-0 ">
+          <AppleCardsCarouselDemo />
+        </div>
         {/* <section
           className={`  bg-transparent  flex flex-col justify-center items-center text-4xl`}
         >
