@@ -16,6 +16,7 @@
     "@tabler/icons-react": "^3.33.0",
     "clsx": "^2.1.1",
     "dotenv": "^16.4.5",
+    "embla-carousel-react": "^8.6.0",
     "framer-motion": "^11.3.8",
     "lucide-react": "^0.399.0",
     "mini-svg-data-uri": "^1.4.4",

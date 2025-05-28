@@ -202,9 +202,10 @@ const ProductSlider = () => {
             </motion.div>
           )}
         </AnimatePresence>
-        <div className=" border-r border-black ml-10 mb-10 border-2 rounded-s-2xl rounded-r-0 ">
+        <div className="lg:ml-10 lg:mb-10 ">
           <AppleCardsCarouselDemo />
         </div>
+        <div className="border border-black mx-20 lg:my-10 m-10"></div>
         {/* <section
           className={`  bg-transparent  flex flex-col justify-center items-center text-4xl`}
         >
