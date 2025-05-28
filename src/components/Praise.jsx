@@ -6,6 +6,7 @@ import { TracingBeam } from "./ui/tracing-beam";
 import ListOfFeatures from "./ListOfFeatures";
 import { AnimatePresence, motion } from "framer-motion";
 import { RiDoubleQuotesR } from "react-icons/ri";
+import { CiCircleChevLeft, CiCircleChevRight } from "react-icons/ci";
 // import { CarouselPlugin } from "./ui/testemonialCarousel";
 // import { motion } from "framer-motion";
 
@@ -74,15 +75,15 @@ const Praise = () => {
         {/* Navigation Buttons */}
         <button
           onClick={prevSlide}
-          className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75"
+          className="absolute top-1/2 left-4 transform -translate-y-1/2 text-white font-extrabold text-2xl bg-[#282623] rounded-full "
         >
-          &#8592;
+          <CiCircleChevLeft />
         </button>
         <button
           onClick={nextSlide}
-          className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full hover:bg-opacity-75"
+          className="absolute top-1/2 right-4 transform -translate-y-1/2 text-white font-extrabold text-2xl bg-[#282623] rounded-full "
         >
-          &#8594;
+          <CiCircleChevRight />
         </button>
 
         {/* Dots */}
@@ -165,8 +166,8 @@ const Praise = () => {
             </button>
           )}
         </div>
-        <div className="name">_ {name}</div>
-        <div className="stars w-full flex justify-around items-center ">
+        <div className="name text-sm">_ {name}</div>
+        <div className="stars w-full flex justify-around items-center text-xs">
           ★★★★★ <span>{title}</span>
         </div>
       </div>
@@ -182,10 +183,10 @@ const Praise = () => {
             whileInView={{ opacity: 1, y: 0 }}
             initial={{ opacity: 0, y: 100 }}
             transition={{ duration: 1 }}
-            className="lg:h-[90vh] overflow-hidden"
+            className="lg:h-[90vh] w-full overflow-hidden object-cover object-center flex justify-center items-center "
           >
             <img
-              className="h-[50vh] lg:h-fit w-full object-cover object-center"
+              className="h-[50vh] lg:h-full w-full object-cover object-center"
               src={
                 "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/A%20high-resolution,%20realistic%20daytime%20photograph%20of%20a%20house%20exterior%20with%20a%20symmetrical%20composition.%20In%20the%20center,%20there%20is%20a%20modern%20dark%20brown%20wooden%20double%20door%20with%20detailed%20paneling%20and%20a%20brass%20handle.%20To%20the%20right%20of%20the%20door%20is%20a%20%20(2).jpg"
               }
@@ -196,9 +197,10 @@ const Praise = () => {
               whileInView={{ opacity: 1, y: 0 }}
               initial={{ opacity: 0, y: -100 }}
               transition={{ duration: 1.5 }}
-              className="text-3xl h-full drop-shadow-2xl w-full flex justify-center items-center bg-black/60 text-[#DEDFD8] font-Cinzel tracking-widest"
+              className=" h-full drop-shadow-2xl w-full flex justify-center items-center bg-black/60 text-[#DEDFD8] font-Cinzel tracking-widest flex-col lg:gap-20"
             >
               Testimonials
+              <span className="lg:text-7xl text-3xl">Our customers say</span>
             </motion.h1>
           </div>
         </div>

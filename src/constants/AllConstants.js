@@ -93,7 +93,7 @@ export const ProductPicture = [
     id: "3",
     title: "Durability",
     image:
-      "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/ProductCard3.png?updatedAt=1748259473119",
+      "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/ChatGPT%20Image%20May%2029,%202025,%2012_37_45%20AM.png",
   },
 ];
 
