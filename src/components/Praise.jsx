@@ -1,14 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
-import { LampContainer } from "./ui/lamp";
 import { testimonials } from "../constants/AllConstants";
-import { TracingBeam } from "./ui/tracing-beam";
-import ListOfFeatures from "./ListOfFeatures";
 import { AnimatePresence, motion } from "framer-motion";
 import { RiDoubleQuotesR } from "react-icons/ri";
 import { CiCircleChevLeft, CiCircleChevRight } from "react-icons/ci";
-// import { CarouselPlugin } from "./ui/testemonialCarousel";
-// import { motion } from "framer-motion";
+import { Instagram } from "lucide-react";
+import { Link } from "react-router-dom";
+import { InstagramPosts } from "../constants/AllConstants";
 
 const Praise = () => {
   const Typewriter = ({ text, speed = 50 }) => {
@@ -26,6 +23,75 @@ const Praise = () => {
     }, [text, speed]);
 
     return <p className="whitespace-pre-line">{displayedText}</p>;
+  };
+
+  const Card = ({ quote, name, title, onReadMore }) => {
+    const getShortQuote = (text) => {
+      const words = text.split(" ");
+      if (words.length <= 25) return text;
+      return words.slice(0, 25).join(" ") + "...";
+    };
+
+    return (
+      <div className="h-96 w-96 lg:shadow-2xl lg:shadow-[#DEDFD8] scale-110 rounded-lg flex flex-col m-5 justify-evenly items-start bg-[#DEDFD8] px-5 font-Caveat select-none">
+        <h1 className="text-4xl">
+          <RiDoubleQuotesR />
+        </h1>
+        <div className="review">
+          <h1 className="text-justify lg:text-2xl text-lg">
+            "{getShortQuote(quote)}"
+          </h1>
+          {quote.split(" ").length > 25 && (
+            <button
+              onClick={() => onReadMore(quote)}
+              className="border-b border-[#282623] hover:scale-105 duration-300 ease-in-out mt-5"
+            >
+              Read more
+            </button>
+          )}
+        </div>
+        <div className="name">_ {name}</div>
+        <div className="stars w-full flex justify-around items-center">
+          ★★★★★ <span>{title}</span>
+        </div>
+      </div>
+    );
+  };
+
+  const InstagramCard = ({ image, caption, username, postUrl, profileUrl }) => {
+    return (
+      <Link
+        target="_blank"
+        to={profileUrl}
+        className="max-w-md rounded-2xl overflow-hidden bg-white border border-pink-600 transition hover:shadow-xl lg:shadow-2xl lg:shadow-pink-600 duration-300 ease-in-out"
+      >
+        <a href={postUrl} target="_blank" rel="noopener noreferrer">
+          <img src={image} alt={caption} className="w-full h-72 object-cover" />
+        </a>
+        <div className="p-4">
+          <div className="flex items-center gap-3 mb-3">
+            <Instagram className="text-pink-600" size={20} />
+            <a
+              href={profileUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-semibold text-gray-800 hover:text-pink-600"
+            >
+              @{username}
+            </a>
+          </div>
+          <p className="text-gray-700 text-sm line-clamp-3">{caption}</p>
+          <a
+            href={postUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block mt-3 text-sm text-pink-600 font-medium hover:underline"
+          >
+            View on Instagram →
+          </a>
+        </div>
+      </Link>
+    );
   };
 
   const Carousel = () => {
@@ -87,7 +153,7 @@ const Praise = () => {
         </button>
 
         {/* Dots */}
-        <div className="flex justify-center gap-2 my-5 lg:mt-20">
+        <div className="lg:flex justify-center gap-2 my-5 lg:mt-20 hidden ">
           {testimonials.map((_, index) => (
             <button
               key={index}
@@ -120,12 +186,11 @@ const Praise = () => {
                 zIndex: 1000,
               }}
             >
-              <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 transition-opacity duration-300">
+              <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 transition-opacity duration-300 select-none">
                 <div className="bg-[#DEDFD8] p-6 rounded-lg shadow-lg w-[90%] max-w-xl animate-fadeIn">
-                  <h2 className="text-2xl font-semibold mb-4">Full Quote</h2>
-                  <p className="text-gray-700 mb-4 text-xl text-justify">
+                  <p className="text-gray-700 mb-4  text-justify font-Caveat text-2xl">
                     {" "}
-                    <Typewriter text={modalQuote} speed={5} />
+                    <Typewriter text={modalQuote} speed={40} />
                   </p>
                   {/* <p className="text-gray-700 mb-4 text-xl">"{modalQuote}"</p> */}
                   <button
@@ -143,32 +208,63 @@ const Praise = () => {
     );
   };
 
-  const Card = ({ quote, name, title, onReadMore }) => {
-    const getShortQuote = (text) => {
-      const words = text.split(" ");
-      if (words.length <= 25) return text;
-      return words.slice(0, 25).join(" ") + "...";
+  const CarouselInstagram = () => {
+    const prevSlide = () => {
+      setCurrent((prev) => (prev === 0 ? totalSlides - 1 : prev - 1));
     };
 
+    const nextSlide = () => {
+      setCurrent((prev) => (prev === totalSlides - 1 ? 0 : prev + 1));
+    };
+    const [current, setCurrent] = useState(0);
+    const totalSlides = InstagramPosts.length;
+
     return (
-      <div className="h-96 w-96 lg:shadow-2xl lg:shadow-[#DEDFD8] scale-110 rounded-lg flex flex-col m-5 justify-evenly items-start bg-[#DEDFD8] px-5">
-        <h1 className="text-4xl">
-          <RiDoubleQuotesR />
-        </h1>
-        <div className="review">
-          <h1 className="text-justify">"{getShortQuote(quote)}"</h1>
-          {quote.split(" ").length > 25 && (
-            <button
-              onClick={() => onReadMore(quote)}
-              className="border-b border-[#282623] hover:scale-105 duration-300 ease-in-out mt-5 "
+      <div className="relative overflow-hidden lg:w-1/2 w-[90%]">
+        <div
+          className="flex transition-transform duration-700 ease-in-out"
+          style={{ transform: `translateX(-${current * 100}%)` }}
+        >
+          {InstagramPosts.map((post) => (
+            <div
+              key={post.id}
+              className="flex-shrink-0 w-full h-full flex justify-center items-center"
             >
-              Read more
-            </button>
-          )}
+              <InstagramCard
+                image={post.image}
+                caption={post.caption}
+                username="arisertradco"
+                profileUrl="https://www.instagram.com/arisertradco/"
+              />
+            </div>
+          ))}
         </div>
-        <div className="name text-sm">_ {name}</div>
-        <div className="stars w-full flex justify-around items-center text-xs">
-          ★★★★★ <span>{title}</span>
+
+        {/* Navigation Buttons */}
+        <button
+          onClick={prevSlide}
+          className="absolute top-1/2 left-4 transform -translate-y-1/2 text-white font-extrabold text-2xl bg-[#282623] rounded-full "
+        >
+          <CiCircleChevLeft />
+        </button>
+        <button
+          onClick={nextSlide}
+          className="absolute top-1/2 right-4 transform -translate-y-1/2 text-white font-extrabold text-2xl bg-[#282623] rounded-full "
+        >
+          <CiCircleChevRight />
+        </button>
+
+        {/* Dots */}
+        <div className="lg:flex justify-center gap-2 my-5 lg:mt-20 hidden ">
+          {InstagramPosts.map((_, index) => (
+            <button
+              key={index}
+              className={`h-3 w-3 rounded-full ${
+                index === current ? "bg-[#DEDFD8]" : "bg-[#2A2623] border"
+              }`}
+              onClick={() => setCurrent(index)}
+            />
+          ))}
         </div>
       </div>
     );
@@ -176,7 +272,6 @@ const Praise = () => {
 
   return (
     <div>
-      {/* <div id="praise" className={`bg-[#DEDFD8] text-[#130F0C]`}> */}
       <div id="praise" className={`bg-[#282623] text-[#130F0C]`}>
         <div className="flex lg:h-fit relative">
           <motion.div
@@ -204,151 +299,18 @@ const Praise = () => {
             </motion.h1>
           </div>
         </div>
-        <div className="flex flex-col justify-center items-center lg:py-20 py-5">
+        <div className="flex justify-around items-center lg:py-20 py-5">
+          <h1 className="font-Cinzel text-4xl text-[#DEDFD8] border-b border-[#DEDFD8] py-2 px-5 hidden lg:flex">
+            In store reviews
+          </h1>
           <Carousel />
         </div>
-      </div>
-
-      <div className="hidden">
-        older code
-        {/* lamp container  */}
-        {/* <section className="h-fit">
-        <LampContainer
-            className={`flex flex-col justify-evenly items-center`}
-          >
-            <motion.div
-              whileInView={{ opacity: 1, y: 0 }}
-              initial={{ opacity: 0, y: -100 }}
-              transition={{ duration: 1.5 }}
-              className={`flex flex-col justify-evenly items-center`}
-            >
-              <h1
-                className={`text-center lg:text-5xl text-3xl lg:w-3/4 uppercase font-sans `}
-              >
-                Invest in peace of mind
-              </h1>
-              <h1
-                className={`text-center font-light lg:text-5xl text-2xl w-full uppercase font-sans`}
-              >
-                lasting durability with steel door.
-              </h1>
-            </motion.div>
-          </LampContainer>
-      </section> */}
-        {/* infinite moving cards  */}
-        {/* <div className="hidden lg:block">
-          <section className={`bg-[#020617] flex flex-col`}>
-            <h1 className={`text-xl font-light  text-center`}>
-              Customer Reviews
-            </h1>
-            <InfiniteMovingCards
-              items={testimonials}
-              direction="right"
-              speed="normal"
-            />
-          </section>
-        </div> */}
-        {/* <TracingBeam>
-      </TracingBeam> */}
-        {/* <div className=" flex flex-col justify-center items-center gap-10 mt-20 ">
-        <motion.h1
-          whileInView={{ opacity: 1, x: 0 }}
-          initial={{ opacity: 0, x: -100 }}
-          transition={{ duration: 0.5 }}
-          className="uppercase lg:text-3xl text-2xl font-sans"
-        >
-          Authorized Dealer of
-        </motion.h1>
-        <section className="w-full flex justify-center items-center">
-          <motion.div
-            whileInView={{ opacity: 1, x: 0 }}
-            initial={{ opacity: 0, x: 100 }}
-            transition={{ duration: 0.5 }}
-            className="flex w-full lg:w-1/2"
-          >
-            <div className="gap-8 flex flex-col justify-center items-center w-full h-full lg:flex-row ">
-              <motion.img
-                variants={motionVariants(2.5)}
-                initial="initial"
-                animate="animate"
-                src={DealerShip1}
-                alt="Advertisement"
-                className="w-32 h-32 rounded-full border-4 p-3 border-neutral-900"
-              />
-              <motion.img
-                variants={motionVariants(2)}
-                initial="initial"
-                animate="animate"
-                src={DealerShip2}
-                alt="Advertisement"
-                className="w-32 h-32 rounded-full border-4 p-3 border-neutral-900"
-              />
-            </div>
-            <div className="gap-8 flex flex-col justify-center items-center w-full h-full lg:flex-row ">
-              <motion.img
-                variants={motionVariants(1.5)}
-                initial="initial"
-                animate="animate"
-                src={DealerShip3}
-                alt="Advertisement"
-                className="w-32 h-32 rounded-full border-4 p-3 border-neutral-900"
-              />
-              <motion.img
-                variants={motionVariants(3)}
-                initial="initial"
-                animate="animate"
-                src={DealerShip4}
-                alt="Advertisement"
-                className="w-32 h-32 rounded-full border-4 p-3 border-neutral-900"
-              />
-            </div>
-          </motion.div>
-        </section>
-      </div>
-      <div className=" flex flex-col justify-center items-center gap-10 mt-20">
-        <motion.h1
-          whileInView={{ opacity: 1, x: 0 }}
-          initial={{ opacity: 0, x: -100 }}
-          transition={{ duration: 0.5 }}
-          className=" lg:text-3xl text-2xl font-sans"
-        >
-          Our Advertising Partners
-        </motion.h1>
-        <section>
-          <motion.div
-            whileInView={{ opacity: 1, x: 0 }}
-            initial={{ opacity: 0, x: 100 }}
-            transition={{ duration: 0.5 }}
-            className="flex gap-8 flex-col lg:flex-row"
-          >
-            <motion.img
-              variants={motionVariants(2.5)}
-              initial="initial"
-              animate="animate"
-              src={Add_partner3}
-              alt="Advertisement"
-              className="w-32 h-32 rounded-full border-4 p-3 border-neutral-900"
-            />
-            <motion.img
-              variants={motionVariants(2)}
-              initial="initial"
-              animate="animate"
-              src={Add_partner1}
-              alt="Advertisement"
-              className="w-32 h-32 rounded-full border-4 p-3 border-neutral-900"
-            />
-            <motion.img
-              variants={motionVariants(1.5)}
-              initial="initial"
-              animate="animate"
-              src={Add_partner2}
-              alt="Advertisement"
-              className="w-32 h-32 rounded-full border-4 p-3 border-neutral-900"
-            />
-          </motion.div>
-        </section>
-      </div> */}
-        {/* <ListOfFeatures /> */}
+        <div className="flex justify-around items-center lg:py-20 py-5 lg:border-t lg:mx-20">
+          <CarouselInstagram />
+          <h1 className="font-Cinzel text-3xl text-[#DEDFD8] border-b border-[#DEDFD8] py-2 px-5 hidden lg:flex">
+            Instagram Updates
+          </h1>
+        </div>
       </div>
     </div>
   );

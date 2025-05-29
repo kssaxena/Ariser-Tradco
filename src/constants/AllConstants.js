@@ -14,37 +14,143 @@ export const testimonials = [
   {
     id: 1,
     quote:
-      "Fortified with strength and security, a steel door stands guard. Its unyielding surface, painted or gleaming bare, discourages unwanted entry. Unlike its wooden counterpart, it won't buckle under pressure or succumb to flames.  This dependable barrier offers peace of mind, a silent promise of protection for what lies beyond.",
-    name: "Unknown User",
+      "Fortified with strength and security, a steel door stands guard. Its unyielding surface, painted or gleaming bare, discourages unwanted entry. Unlike its wooden counterpart, it won't buckle under pressure or succumb to flames. This dependable barrier offers peace of mind, a silent promise of protection for what lies beyond.",
+    name: "Kshitij",
     title: "Superb Strength",
   },
   {
     id: 2,
     quote:
-      "Clad in cool, industrial grey, a steel door exudes an air of stoic resilience. Its solid form provides a comforting sense of impenetrability, a stark contrast to the light tap-tap-tap that might announce a wooden door.  The satisfying weight behind a push on the handle assures a tight seal, muffling noise and keeping the elements at bay.  This is a portal built to last, a guardian against the outside world.",
-    name: "Unknown User",
+      "Clad in cool, industrial grey, a steel door exudes an air of stoic resilience. Its solid form provides a comforting sense of impenetrability, a stark contrast to the light tap-tap-tap that might announce a wooden door. The satisfying weight behind a push on the handle assures a tight seal, muffling noise and keeping the elements at bay.",
+    name: "Mohit",
     title: "Styled with Elegance",
   },
   {
     id: 3,
     quote:
-      "With a heavy groan on its hinges, the steel door swings open. Unlike the warm, inviting creak of wood, this sound speaks of purpose and resolve. A cold sheen catches the light, a subtle reminder of the industrial strength beneath the painted surface. This isn't just a point of entry, it's a line drawn in the sand, a barrier between the known and the unknown. Whether leading to a bustling server room or a solitary vault, the steel door demands a moment of pause, a silent respect for the power it holds.",
-    name: "Kshitij, Ranchi",
+      "With a heavy groan on its hinges, the steel door swings open. Unlike the warm, inviting creak of wood, this sound speaks of purpose and resolve. A cold sheen catches the light, a subtle reminder of the industrial strength beneath the painted surface.",
+    name: "Ankit",
     title: "Very Convenient to Install",
   },
   {
     id: 4,
     quote:
-      "Hidden within an unassuming brick wall, a steel door waits patiently. Unlike its ornate wooden cousins that crave attention, this one prioritizes stealth. A faint outline might be the only clue to its existence. A keypad or a hidden keyhole activates its silent transformation. The heavy slab swings inward with a well-oiled whoosh, revealing a passage bathed in cool, artificial light. This isn't just a doorway, it's a secret passage, a portal to a world unseen, a testament to the hidden depths that can lie beneath the surface.",
-    name: "Piyush Kumar, Ranchi",
+      "Hidden within an unassuming brick wall, a steel door waits patiently. Unlike its ornate wooden cousins that crave attention, this one prioritizes stealth. A keypad or a hidden keyhole activates its silent transformation.",
+    name: "Piyush Kumar",
     title: "Fascinating Designs",
   },
-  // {
-  //   quote:
-  //     "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-  //   name: "Herman Melville",
-  //   title: "Moby-Dick",
-  // },
+  {
+    id: 5,
+    quote:
+      "Its robust metal frame inspires confidence. Even before turning the handle, you can feel the security it promises. The door doesn’t ask for attention—it commands it.",
+    name: "Rahul",
+    title: "Built to Last",
+  },
+  {
+    id: 6,
+    quote:
+      "From monsoon rains to blazing summers, the steel door stands unchanged. Its resistance to rust and swelling makes it the practical choice for Indian homes.",
+    name: "Ritika",
+    title: "Weatherproof Durability",
+  },
+  {
+    id: 7,
+    quote:
+      "A solid click echoes as the steel door locks into place. There’s a satisfaction in that sound, like the punctuation mark at the end of a long day.",
+    name: "Suresh",
+    title: "Sound of Security",
+  },
+  {
+    id: 8,
+    quote:
+      "Elegance meets engineering in this matte-finish steel masterpiece. Who said utility can’t be beautiful?",
+    name: "Nikita",
+    title: "Function with Flair",
+  },
+  {
+    id: 9,
+    quote:
+      "Children slam it, guests admire it, and weather dares not touch it—this is the kind of reliability that becomes part of your daily peace.",
+    name: "Manoj",
+    title: "Trusted Everyday",
+  },
+  {
+    id: 10,
+    quote:
+      "A quiet sentinel by day, an unbreakable guard by night. It’s more than a door—it’s reassurance.",
+    name: "Ayesha",
+    title: "Silent Guardian",
+  },
+  {
+    id: 11,
+    quote:
+      "Gone are the days of warped wood and swelling frames. This steel door fits like a glove—season after season.",
+    name: "Harshit",
+    title: "Perfect Fit, Every Time",
+  },
+  {
+    id: 12,
+    quote:
+      "It may not creak like wood, but every motion of this steel door speaks of quality engineering and design finesse.",
+    name: "Neha",
+    title: "Precision in Motion",
+  },
+  {
+    id: 13,
+    quote:
+      "No matter the hour, this steel door provides the same steadfast comfort—a true companion to your home’s rhythm.",
+    name: "Aman",
+    title: "Consistency You Can Feel",
+  },
+  {
+    id: 14,
+    quote:
+      "Modern design with old-world strength—this door merges generations of trust and innovation.",
+    name: "Deepika",
+    title: "Tradition Reinvented",
+  },
+  {
+    id: 15,
+    quote:
+      "It’s not flashy, but it's flawless. The kind of door you come to appreciate more with each passing day.",
+    name: "Ravi",
+    title: "Subtle Perfection",
+  },
+  {
+    id: 16,
+    quote:
+      "Installation was a breeze, and the impact on both appearance and security was immediate. Love at first latch!",
+    name: "Megha",
+    title: "Instant Upgrade",
+  },
+  {
+    id: 17,
+    quote:
+      "While others worry about termites, I rest easy behind steel. It’s an investment I’ll never regret.",
+    name: "Vikram",
+    title: "Smart Choice for the Long Run",
+  },
+  {
+    id: 18,
+    quote:
+      "Some things in life you don't have to overthink. This door? One look and I knew it was the right one.",
+    name: "Sneha",
+    title: "Effortless Decision",
+  },
+  {
+    id: 19,
+    quote:
+      "Every guest who walks through it comments on its heft and beauty. It’s now a conversation starter.",
+    name: "Rohan",
+    title: "Heavy in Style",
+  },
+  {
+    id: 20,
+    quote:
+      "When safety, style, and longevity come together, you know you’ve chosen well. This steel door? A statement.",
+    name: "Ishita",
+    title: "Secure in Style",
+  },
 ];
 
 export const BrandNameIcon = [
@@ -94,6 +200,93 @@ export const ProductPicture = [
     title: "Durability",
     image:
       "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/ChatGPT%20Image%20May%2029,%202025,%2012_37_45%20AM.png",
+  },
+];
+
+export const InstagramPosts = [
+  {
+    id: "0",
+    image:
+      "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/all_ig_posts/IMG-20250529-WA0020.jpg?updatedAt=1748541774224",
+    caption: "Bold designs that define distinction. #AriserTradco",
+  },
+  {
+    id: "1",
+    image:
+      "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/all_ig_posts/IMG-20250529-WA0018.jpg?updatedAt=1748541774184",
+    caption: "Elegance in every corner. Transform your space today.",
+  },
+  {
+    id: "2",
+    image:
+      "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/all_ig_posts/IMG-20250529-WA0019.jpg?updatedAt=1748541774048",
+    caption: "Crafted to inspire. Designed to last. #InteriorGoals",
+  },
+  {
+    id: "3",
+    image:
+      "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/all_ig_posts/IMG-20250529-WA0022.jpg?updatedAt=1748541773947",
+    caption: "Minimalism meets functionality. Your style, our vision.",
+  },
+  {
+    id: "4",
+    image:
+      "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/all_ig_posts/IMG-20250529-WA0021.jpg?updatedAt=1748541773936",
+    caption: "The details aren’t just details—they make the design.",
+  },
+  {
+    id: "5",
+    image:
+      "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/all_ig_posts/IMG-20250529-WA0028.jpg?updatedAt=1748541770161",
+    caption: "Infusing life into every space. #DesignWithPurpose",
+  },
+  {
+    id: "6",
+    image:
+      "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/all_ig_posts/IMG-20250529-WA0024.jpg?updatedAt=1748541769787",
+    caption: "A new standard in style and substance. Discover more.",
+  },
+  {
+    id: "7",
+    image:
+      "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/all_ig_posts/IMG-20250529-WA0032.jpg?updatedAt=1748541769733",
+    caption: "Shaping spaces that spark emotion and energy.",
+  },
+  {
+    id: "8",
+    image:
+      "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/all_ig_posts/IMG-20250529-WA0030.jpg?updatedAt=1748541769696",
+    caption: "Timeless textures, flawless finishes. Only at Ariser.",
+  },
+  {
+    id: "9",
+    image:
+      "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/all_ig_posts/IMG-20250529-WA0029.jpg?updatedAt=1748541769700",
+    caption: "Elevating interiors with premium design choices.",
+  },
+  {
+    id: "10",
+    image:
+      "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/all_ig_posts/IMG-20250529-WA0023.jpg?updatedAt=1748541769602",
+    caption: "Designs that speak louder than words. #AriserTradco",
+  },
+  {
+    id: "11",
+    image:
+      "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/all_ig_posts/IMG-20250529-WA0031.jpg?updatedAt=1748541769462",
+    caption: "Let your space tell your story with our latest collection.",
+  },
+  {
+    id: "12",
+    image:
+      "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/all_ig_posts/IMG-20250529-WA0027.jpg?updatedAt=1748541769407",
+    caption: "Bold. Refined. Yours. Custom design excellence.",
+  },
+  {
+    id: "13",
+    image:
+      "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/all_ig_posts/IMG-20250529-WA0026.jpg?updatedAt=1748541769270",
+    caption: "Simplicity redefined. Because great design is effortless.",
   },
 ];
 

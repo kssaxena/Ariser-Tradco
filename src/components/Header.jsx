@@ -97,7 +97,7 @@ const Header = () => {
           Book Now
         </button> */}
         <a
-          href="tel:+91620365007"
+          href="tel:+916204365007"
           className=" hover:scale-105 duration-300 ease-in-out"
         >
           <FaPhoneAlt className="text-2xl " />
