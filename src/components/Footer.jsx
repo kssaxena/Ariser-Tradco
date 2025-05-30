@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="w-full flex justify-evenly items-center">
           <section className="text-center text-gray-500 text-sm">
             <h1>
-              2021 Ariser Tradco. <br></br>All rights reserved.
+              Ariser Tradco. <br></br>All rights reserved.
             </h1>
           </section>
           {/* <section className={`flex p-5 text-white`}>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { testimonials } from "../constants/AllConstants";
 import { AnimatePresence, motion } from "framer-motion";
 import { RiDoubleQuotesR } from "react-icons/ri";

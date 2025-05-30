@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { InfiniteProductSlider } from "./ui/InfiniteProductSlider";
-// import { ProductDetails1, ProductDetails2 } from "../constants/AllConstants";
 import { AnimatePresence, motion } from "framer-motion";
 import { X } from "lucide-react";
 import CountUp from "react-countup";
@@ -8,7 +6,7 @@ import ScrollTrigger from "react-scroll-trigger";
 import { Carousel, Card } from "./ui/apple-cards-carousel";
 import { ProductCardSlider } from "../constants/AllConstants";
 
-const ProductSlider = () => {
+const Products = () => {
   const [openModel, setOpenModel] = useState(false);
   const [count, setCount] = useState(false);
 
@@ -232,4 +230,4 @@ const ProductSlider = () => {
   );
 };
 
-export default ProductSlider;
+export default Products;

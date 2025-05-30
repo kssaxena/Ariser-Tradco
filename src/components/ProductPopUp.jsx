@@ -6,12 +6,12 @@ import emailjs from "@emailjs/browser";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ParallaxScroll } from "./ui/parallax-scroll";
-import { ImageSlider } from "./ImageSlider";
-import { transparent } from "tailwindcss/colors";
+
 import { FiInstagram } from "react-icons/fi";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { BiLogoGmail } from "react-icons/bi";
 import { FaPhoneAlt } from "react-icons/fa";
+import { ImageSlider } from "../constants/AllConstants";
 
 const HeroHeaderContactForm = () => {
   const formRef = useRef();

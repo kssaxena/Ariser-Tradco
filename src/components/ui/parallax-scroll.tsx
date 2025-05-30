@@ -4,7 +4,6 @@ import { useRef } from "react";
 import { motion } from "framer-motion";
 import { cn } from "../../utils/cn";
 import React from "react";
-import { ImageSlider } from "../ImageSlider";
 // import { ImageSlider } from "../ImageSlider";
 // import Image from "next/image";
 // import { cn } from "@/utils/cn";

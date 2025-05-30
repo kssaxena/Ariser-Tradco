@@ -1,12 +1,6 @@
-import React from "react";
-import { AuroraBackground } from "./ui/aurora-background";
-import Button from "./ui/Button";
-import { images } from "../assets/Images";
-import { BookPopUp, ContactPopUp, KnowMorePopup } from "./ProductPopUp";
+import { BookPopUp, KnowMorePopup } from "./ProductPopUp";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import { ChevronDown } from "lucide-react";
 
 const Home = () => {
   const motionVariants = (duration) => ({

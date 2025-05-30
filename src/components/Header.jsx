@@ -2,8 +2,6 @@ import React, { useEffect } from "react";
 import { NavigationElements } from "../constants/AllConstants";
 import Button from "./ui/Button";
 import { images } from "../assets/Images";
-// import { useNavigate } from "react-router-dom";
-import { BookPopUp } from "./ProductPopUp.jsx";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { FaLocationDot } from "react-icons/fa6";

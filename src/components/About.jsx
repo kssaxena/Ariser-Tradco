@@ -1,6 +1,5 @@
 import React from "react";
 import { ParallaxScroll } from "./ui/parallax-scroll";
-import { ImageSlider } from "./ImageSlider";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import { ProductPicture } from "../constants/AllConstants";
@@ -14,7 +13,7 @@ import {
   DealerShip4,
 } from "../assets/Index";
 
-const Slider = () => {
+const About = () => {
   const zoomVariant = {
     hidden: { scale: 0.8, opacity: 0 },
     visible: (i) => ({
@@ -187,12 +186,9 @@ const Slider = () => {
             </motion.div>
           </section>
         </div>
-        {/* <div className="w-full flex justify-center items-center">
-          <ParallaxScroll ImageSlider={ImageSlider} />
-        </div> */}
       </div>
     </div>
   );
 };
 
-export default Slider;
+export default About;
