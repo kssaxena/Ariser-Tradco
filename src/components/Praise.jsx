@@ -33,7 +33,7 @@ const Praise = () => {
     };
 
     return (
-      <div className="h-96 w-96 lg:shadow-2xl lg:shadow-[#DEDFD8] scale-110 rounded-lg flex flex-col m-5 justify-evenly items-start bg-[#DEDFD8] px-5 font-Caveat select-none">
+      <div className="h-96 w-96  scale-110 rounded-lg flex flex-col m-5 justify-evenly items-start bg-[#DEDFD8] px-5 font-Caveat select-none">
         <h1 className="text-4xl">
           <RiDoubleQuotesR />
         </h1>
@@ -63,10 +63,14 @@ const Praise = () => {
       <Link
         target="_blank"
         to={profileUrl}
-        className="max-w-md rounded-2xl overflow-hidden bg-white border border-pink-600 transition hover:shadow-xl lg:shadow-2xl lg:shadow-pink-600 duration-300 ease-in-out"
+        className="max-w-md rounded-2xl overflow-hidden bg-white transition hover:shadow-xl duration-300 ease-in-out p-2"
       >
         <a href={postUrl} target="_blank" rel="noopener noreferrer">
-          <img src={image} alt={caption} className="w-full h-72 object-cover" />
+          <img
+            src={image}
+            alt={caption}
+            className="w-full h-72 object-cover rounded-2xl"
+          />
         </a>
         <div className="p-4">
           <div className="flex items-center gap-3 mb-3">

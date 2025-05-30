@@ -5,6 +5,7 @@ import Contact from "./components/Contact";
 import Products from "./components/Products";
 import Praise from "./components/Praise";
 import About from "./components/About";
+import Blog from "./components/Blog";
 // import ContactPopUp from "./components/ProductPopUp";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <About />
       <Products />
       <Praise />
+      <Blog />
       <Contact />
       <Footer />
     </div>

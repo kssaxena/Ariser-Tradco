@@ -7,6 +7,7 @@ export const NavigationElements = [
   { id: "3", title: "About", url: "#about" },
   { id: "1", title: "Products", url: "#products_slider" },
   { id: "2", title: "Praise", url: "#praise" },
+  { id: "5", title: "Blog", url: "#blog" },
   { id: "4", title: "Contact", url: "#contact" },
 ];
 
