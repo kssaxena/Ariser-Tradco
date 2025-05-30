@@ -15,7 +15,6 @@ const Home = () => {
       },
     },
   });
-  // const navigate = useNavigate();
 
   const [showContactPopUp, setShowContactForm] = useState(false);
   const [showKnowMore, setShowKnowMore] = useState(false);
