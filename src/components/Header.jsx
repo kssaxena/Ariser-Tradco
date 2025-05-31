@@ -82,6 +82,7 @@ const Header = () => {
         />
         <h1 className="lg:flex hidden ">ARISER TRADCO</h1>
       </motion.section>
+      {/* social links  */}
       <motion.section
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -124,11 +125,6 @@ const Header = () => {
           <IoLogoWhatsapp className="text-2xl " />
         </a>
       </motion.section>
-      {/* <AnimatePresence>
-        {showContactPopUp && (
-          <BookPopUp onClose={() => setShowContactForm(false)} />
-        )}
-      </AnimatePresence> */}
     </div>
   );
 };
