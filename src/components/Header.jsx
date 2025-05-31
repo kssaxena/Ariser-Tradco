@@ -88,12 +88,6 @@ const Header = () => {
         transition={{ duration: 0.5, delay: 0.5 }}
         className={`flex justify-center items-center lg:gap-5 gap-2 `}
       >
-        {/* <button
-          onClick={() => setShowContactForm(true)}
-          className="border-b hover:scale-105 duration-300 ease-in-out lg:flex hidden"
-        >
-          Book Now
-        </button> */}
         <a
           href="tel:+916204365007"
           className=" hover:scale-105 duration-300 ease-in-out"

@@ -257,11 +257,11 @@ const KnowMorePopup = ({ onClose }) => {
       }}
       ref={modelRef}
       onClick={closeModel}
-      className="fixed inset-0 flex justify-center items-center z-50 top-0 backdrop-blur-xl rounded-xl p-2"
+      className="fixed lg:inset-0 flex lg:justify-center lg:items-center z-50 top-0 left-0 backdrop-blur-xl rounded-xl lg:p-2"
     >
-      <div className="flex flex-col w-full items-center justify-center p-10">
+      <div className="flex flex-col lg:w-full lg:items-center lg:justify-center lg:p-10 h-screen overflow-scroll lg:overflow-hidden">
         <button
-          className="place-self-end text-white border-b hover:scale-105 duration-300 ease-in-out flex gap-2"
+          className="place-self-end text-white border-b hover:scale-105 duration-300 ease-in-out flex gap-2 fixed top-4"
           onClick={onClose}
         >
           <X />

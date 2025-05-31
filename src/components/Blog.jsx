@@ -16,7 +16,7 @@ const Blog = () => {
   };
 
   return (
-    <div id="blog">
+    <div id="blog" className="border-b-2 border-black lg:mx-20 mx-5">
       <div className="h-fit w-full lg:pt-24 lg:pb-20 pt-10">
         <h1
           className={`lg:text-6xl text-3xl font-Cinzel tracking-wide lg:px-20 px-5 lg:w-3/4 w-full`}
@@ -27,7 +27,7 @@ const Blog = () => {
           articles
         </h1>
         <div className="py-10 flex lg:flex-row flex-col justify-center items-start gap-10">
-          <div className="lg:w-1/2 w-full flex justify-center items-start flex-col lg:px-20 px-5">
+          <div className="lg:w-1/2 w-full flex justify-center items-start flex-col lg:px-10 px-5">
             <ArticleCard
               imageClassName={`lg:w-[60vh] w-full`}
               image={`https://ik.imagekit.io/jarvisai/Ariser%20Tradco/IMG-20250529-WA0024.jpg?updatedAt=1748629226355`}
@@ -48,13 +48,13 @@ const Blog = () => {
               sophistication.
             </h1>
           </div>
-          <div className="lg:w-1/2 w-full flex flex-col justify-center items-start lg:px-20 px-5">
+          <div className="lg:w-1/2 w-full flex flex-col justify-center items-start lg:px-10 px-5">
             <h1 className="mb-5 text-justify font-Caveat text-2xl tracking-tight lg:flex hidden">
               Steel doors are an excellent choice for homeowners seeking a
-              perfect balance of durability, security, and style. Built
-              to withstand harsh weather conditions and resist forced entry,
-              steel doors offer superior protection compared to traditional wood
-              or fiberglass options.
+              perfect balance of durability, security, and style. Built to
+              withstand harsh weather conditions and resist forced entry, steel
+              doors offer superior protection compared to traditional wood or
+              fiberglass options.
             </h1>
             <ArticleCard
               imageClassName={`lg:w-[50vh] w-full`}
