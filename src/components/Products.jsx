@@ -14,7 +14,7 @@ const Products = () => {
     {
       id: "0",
       background: "10000",
-      front: "Products",
+      front: "More than Products",
     },
     {
       id: "1",
@@ -24,13 +24,8 @@ const Products = () => {
     {
       id: "2",
       background: "4500",
-      front: "Customers",
+      front: "Over Customers",
     },
-    // {
-    //   id: "3",
-    //   background: "Durability",
-    //   front: "./src/assets/ProductCard1.png",
-    // },
   ];
 
   const AchievementCard = ({ BackGround, Front }) => {

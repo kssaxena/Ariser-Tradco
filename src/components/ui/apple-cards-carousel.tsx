@@ -75,7 +75,7 @@ export const Carousel = ({ items, initialScroll = 0 }) => {
     >
       <div className="relative w-full">
         <div
-          className="flex w-full overflow-x-scroll overscroll-x-auto scroll-smooth [scrollbar-width:none] lg:py-10 py-20"
+          className="flex w-full overflow-x-scroll overscroll-x-auto scroll-smooth [scrollbar-width:none] lg:py-10 py-10"
           ref={carouselRef}
           onScroll={checkScrollability}
         >
@@ -94,20 +94,20 @@ export const Carousel = ({ items, initialScroll = 0 }) => {
           >
             {items.map((item, index) => (
               <motion.div
-                initial={{
-                  opacity: 0,
-                  y: 20,
-                }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                  transition: {
-                    duration: 0.5,
-                    delay: 0.2 * index,
-                    ease: "easeOut",
-                    once: true,
-                  },
-                }}
+                // initial={{
+                //   opacity: 0,
+                //   y: 20,
+                // }}
+                // animate={{
+                //   opacity: 1,
+                //   y: 0,
+                //   transition: {
+                //     duration: 0.5,
+                //     delay: 0.2 * index,
+                //     ease: "easeOut",
+                //     once: true,
+                //   },
+                // }}
                 key={"card" + index}
                 className="rounded-3xl last:pr-[5%] md:last:pr-[33%]"
               >
@@ -116,7 +116,7 @@ export const Carousel = ({ items, initialScroll = 0 }) => {
             ))}
           </div>
         </div>
-        <div className="mr-10 flex justify-end gap-2">
+        <div className="justify-center flex gap-2">
           <button
             className="relative z-40 flex h-10 w-10 items-center justify-center rounded-full bg-[#222220] disabled:opacity-50 text-white"
             onClick={scrollLeft}

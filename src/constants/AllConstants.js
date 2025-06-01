@@ -292,6 +292,138 @@ export const InstagramPosts = [
 ];
 
 export const ProductCardSlider = [
+  // tata
+  {
+    src: "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/Tata%20Products%20Array/IMG-20250601-WA0027.jpg?updatedAt=1748794484689",
+  },
+  {
+    src: "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/Tata%20Products%20Array/IMG-20250601-WA0029.jpg?updatedAt=1748794484508",
+  },
+  {
+    src: "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/Tata%20Products%20Array/IMG-20250601-WA0028.jpg?updatedAt=1748794484369",
+  },
+  {
+    src: "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/Tata%20Products%20Array/IMG-20250601-WA0031.jpg?updatedAt=1748794484111",
+  },
+  {
+    src: "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/Tata%20Products%20Array/IMG-20250601-WA0030.jpg?updatedAt=1748794483827",
+  },
+  {
+    src: "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/Tata%20Products%20Array/IMG-20250601-WA0033.jpg?updatedAt=1748794483582",
+  },
+  {
+    src: "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/Tata%20Products%20Array/IMG-20250601-WA0032.jpg?updatedAt=1748794483358",
+  },
+  {
+    src: "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/Tata%20Products%20Array/IMG-20250601-WA0035.jpg?updatedAt=1748794481281",
+  },
+  {
+    src: "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/Tata%20Products%20Array/IMG-20250601-WA0036.jpg?updatedAt=1748794481245",
+  },
+  {
+    src: "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/Tata%20Products%20Array/IMG-20250601-WA0037.jpg?updatedAt=1748794479710",
+  },
+  {
+    src: "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/Tata%20Products%20Array/IMG-20250601-WA0034.jpg?updatedAt=1748794479101",
+  },
+  {
+    src: "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/Tata%20Products%20Array/IMG-20250601-WA0038.jpg?updatedAt=1748794479045",
+  },
+  {
+    src: "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/Tata%20Products%20Array/IMG-20250601-WA0042.jpg?updatedAt=1748794479009",
+  },
+  {
+    src: "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/Tata%20Products%20Array/IMG-20250601-WA0040.jpg?updatedAt=1748794478889",
+  },
+  {
+    src: "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/Tata%20Products%20Array/IMG-20250601-WA0044.jpg?updatedAt=1748794478764",
+  },
+  {
+    src: "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/Tata%20Products%20Array/IMG-20250601-WA0041.jpg?updatedAt=1748794478632",
+  },
+  {
+    src: "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/Tata%20Products%20Array/IMG-20250601-WA0043.jpg?updatedAt=1748794477087",
+  },
+  {
+    src: "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/Tata%20Products%20Array/IMG-20250601-WA0000.jpg?updatedAt=1748794476556",
+  },
+  {
+    src: "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/Tata%20Products%20Array/IMG-20250601-WA0002.jpg?updatedAt=1748794476051",
+  },
+  {
+    src: "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/Tata%20Products%20Array/IMG-20250601-WA0001.jpg?updatedAt=1748794475587",
+  },
+  {
+    src: "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/Tata%20Products%20Array/IMG-20250601-WA0004.jpg?updatedAt=1748794474427",
+  },
+  {
+    src: "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/Tata%20Products%20Array/IMG-20250601-WA0005.jpg?updatedAt=1748794472920",
+  },
+  {
+    src: "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/Tata%20Products%20Array/IMG-20250601-WA0008.jpg?updatedAt=1748794472145",
+  },
+  {
+    src: "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/Tata%20Products%20Array/IMG-20250601-WA0009.jpg?updatedAt=1748794471670",
+  },
+  {
+    src: "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/Tata%20Products%20Array/IMG-20250601-WA0007.jpg?updatedAt=1748794471032",
+  },
+  {
+    src: "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/Tata%20Products%20Array/IMG-20250601-WA0006.jpg?updatedAt=1748794470794",
+  },
+  {
+    src: "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/Tata%20Products%20Array/IMG-20250601-WA0013.jpg?updatedAt=1748794470438",
+  },
+  {
+    src: "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/Tata%20Products%20Array/IMG-20250601-WA0010.jpg?updatedAt=1748794470197",
+  },
+  {
+    src: "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/Tata%20Products%20Array/IMG-20250601-WA0011.jpg?updatedAt=1748794469907",
+  },
+  {
+    src: "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/Tata%20Products%20Array/IMG-20250601-WA0016.jpg?updatedAt=1748794469620",
+  },
+  {
+    src: "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/Tata%20Products%20Array/IMG-20250601-WA0014.jpg?updatedAt=1748794468725",
+  },
+  {
+    src: "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/Tata%20Products%20Array/IMG-20250601-WA0012.jpg?updatedAt=1748794466622",
+  },
+  {
+    src: "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/Tata%20Products%20Array/IMG-20250601-WA0022.jpg?updatedAt=1748794461806",
+  },
+  {
+    src: "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/Tata%20Products%20Array/IMG-20250601-WA0020.jpg?updatedAt=1748794460341",
+  },
+  {
+    src: "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/Tata%20Products%20Array/IMG-20250601-WA0018.jpg?updatedAt=1748794460288",
+  },
+  {
+    src: "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/Tata%20Products%20Array/IMG-20250601-WA0015.jpg?updatedAt=1748794459860",
+  },
+  {
+    src: "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/Tata%20Products%20Array/IMG-20250601-WA0025.jpg?updatedAt=1748794458539",
+  },
+  {
+    src: "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/Tata%20Products%20Array/IMG-20250601-WA0024.jpg?updatedAt=1748794458186",
+  },
+  {
+    src: "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/Tata%20Products%20Array/IMG-20250601-WA0023.jpg?updatedAt=1748794457614",
+  },
+  {
+    src: "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/Tata%20Products%20Array/IMG-20250601-WA0026.jpg?updatedAt=1748794457433",
+  },
+  {
+    src: "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/Tata%20Products%20Array/IMG-20250601-WA0021.jpg?updatedAt=1748794457437",
+  },
+  {
+    src: "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/Tata%20Products%20Array/IMG-20250601-WA0019.jpg?updatedAt=1748794456821",
+  },
+  {
+    src: "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/Tata%20Products%20Array/IMG-20250601-WA0017.jpg?updatedAt=1748794455174",
+  },
+
+  // korean
   {
     src: "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575956/AriserTradco/IMG-20240628-WA0008_phtusd.jpg",
   },
@@ -348,9 +480,6 @@ export const ProductCardSlider = [
   },
   {
     src: "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575953/AriserTradco/IMG-20240628-WA0016_gspvf6.jpg",
-  },
-  {
-    // src: "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1718118365/AriserTradco_yzugnc.jpg",
   },
 ];
 
