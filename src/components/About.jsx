@@ -7,6 +7,7 @@ import {
   Add_partner1,
   Add_partner2,
   Add_partner3,
+  Add_partner4,
   DealerShip1,
   DealerShip2,
   DealerShip3,
@@ -180,6 +181,14 @@ const About = () => {
                 initial="initial"
                 animate="animate"
                 src={Add_partner2}
+                alt="Advertisement"
+                className="w-10 lg:w-20 rounded-full shadow-2xl shadow-[#130F0C]"
+              />
+              <motion.img
+                variants={motionVariants(2.5)}
+                initial="initial"
+                animate="animate"
+                src={Add_partner4}
                 alt="Advertisement"
                 className="w-10 lg:w-20 rounded-full shadow-2xl shadow-[#130F0C]"
               />
