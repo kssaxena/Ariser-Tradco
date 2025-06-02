@@ -484,6 +484,7 @@ export const ProductCardSlider = [
 ];
 
 export const ImageSlider = [
+  // only korean images for home page gallery 
   "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575956/AriserTradco/IMG-20240628-WA0008_phtusd.jpg",
   "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575956/AriserTradco/IMG-20240628-WA0009_xav4m2.jpg",
   "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575956/AriserTradco/IMG-20240628-WA0010_z97gg4.jpg",
