@@ -12,6 +12,7 @@ import { IoLogoWhatsapp } from "react-icons/io";
 import { BiLogoGmail } from "react-icons/bi";
 import { FaPhoneAlt } from "react-icons/fa";
 import { ImageSlider } from "../constants/AllConstants";
+import GalleryFeed from "./ui/gallery-feed";
 
 const HeroHeaderContactForm = () => {
   const formRef = useRef();
@@ -273,9 +274,10 @@ const KnowMorePopup = ({ onClose }) => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -100 }}
           transition={{ duration: 1 }}
-          className="w-full flex justify-center items-center"
+          className="w-full flex items-start overflow-scroll no-scrollbar"
         >
-          <ParallaxScroll ImageSlider={ImageSlider} />
+          <GalleryFeed images={ImageSlider} />
+          {/* <ParallaxScroll ImageSlider={ImageSlider} /> */}
         </motion.div>
       </div>
     </motion.div>
