@@ -293,6 +293,64 @@ export const InstagramPosts = [
 
 export const ProductCardSlider = [
   // tata
+  // korean
+  {
+    src: "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575956/AriserTradco/IMG-20240628-WA0008_phtusd.jpg",
+  },
+  {
+    src: "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575956/AriserTradco/IMG-20240628-WA0009_xav4m2.jpg",
+  },
+  {
+    src: "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575956/AriserTradco/IMG-20240628-WA0010_z97gg4.jpg",
+  },
+  {
+    src: "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575956/AriserTradco/IMG-20240628-WA0007_bdbds8.jpg",
+  },
+  {
+    src: "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575956/AriserTradco/IMG-20240628-WA0006_tsdott.jpg",
+  },
+  {
+    src: "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575956/AriserTradco/IMG-20240628-WA0005_gw6l2m.jpg",
+  },
+  {
+    src: "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575955/AriserTradco/IMG-20240628-WA0004_ww4e3g.jpg",
+  },
+  {
+    src: "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575955/AriserTradco/IMG-20240628-WA0019_idoghw.jpg",
+  },
+  {
+    src: "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575955/AriserTradco/IMG-20240628-WA0015_be8mqe.jpg",
+  },
+  {
+    src: "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575955/AriserTradco/IMG-20240628-WA0003_ptm3ju.jpg",
+  },
+  {
+    src: "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575955/AriserTradco/IMG-20240628-WA0022_welqld.jpg",
+  },
+  {
+    src: "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575955/AriserTradco/IMG-20240628-WA0014_ndhkyh.jpg",
+  },
+  {
+    src: "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575954/AriserTradco/IMG-20240628-WA0021_yrhoy6.jpg",
+  },
+  {
+    src: "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575954/AriserTradco/IMG-20240628-WA0020_ouy4b2.jpg",
+  },
+  {
+    src: "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575954/AriserTradco/IMG-20240628-WA0018_pbjcoo.jpg",
+  },
+  {
+    src: "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575954/AriserTradco/IMG-20240628-WA0017_dvgk5x.jpg",
+  },
+  {
+    src: "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575954/AriserTradco/IMG-20240628-WA0012_savwma.jpg",
+  },
+  {
+    src: "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575954/AriserTradco/IMG-20240628-WA0011_fr801m.jpg",
+  },
+  {
+    src: "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575953/AriserTradco/IMG-20240628-WA0016_gspvf6.jpg",
+  },
   {
     src: "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/Tata%20Products%20Array/IMG-20250601-WA0027.jpg?updatedAt=1748794484689",
   },
@@ -423,64 +481,6 @@ export const ProductCardSlider = [
     src: "https://ik.imagekit.io/jarvisai/Ariser%20Tradco/Tata%20Products%20Array/IMG-20250601-WA0017.jpg?updatedAt=1748794455174",
   },
 
-  // korean
-  {
-    src: "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575956/AriserTradco/IMG-20240628-WA0008_phtusd.jpg",
-  },
-  {
-    src: "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575956/AriserTradco/IMG-20240628-WA0009_xav4m2.jpg",
-  },
-  {
-    src: "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575956/AriserTradco/IMG-20240628-WA0010_z97gg4.jpg",
-  },
-  {
-    src: "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575956/AriserTradco/IMG-20240628-WA0007_bdbds8.jpg",
-  },
-  {
-    src: "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575956/AriserTradco/IMG-20240628-WA0006_tsdott.jpg",
-  },
-  {
-    src: "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575956/AriserTradco/IMG-20240628-WA0005_gw6l2m.jpg",
-  },
-  {
-    src: "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575955/AriserTradco/IMG-20240628-WA0004_ww4e3g.jpg",
-  },
-  {
-    src: "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575955/AriserTradco/IMG-20240628-WA0019_idoghw.jpg",
-  },
-  {
-    src: "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575955/AriserTradco/IMG-20240628-WA0015_be8mqe.jpg",
-  },
-  {
-    src: "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575955/AriserTradco/IMG-20240628-WA0003_ptm3ju.jpg",
-  },
-  {
-    src: "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575955/AriserTradco/IMG-20240628-WA0022_welqld.jpg",
-  },
-  {
-    src: "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575955/AriserTradco/IMG-20240628-WA0014_ndhkyh.jpg",
-  },
-  {
-    src: "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575954/AriserTradco/IMG-20240628-WA0021_yrhoy6.jpg",
-  },
-  {
-    src: "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575954/AriserTradco/IMG-20240628-WA0020_ouy4b2.jpg",
-  },
-  {
-    src: "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575954/AriserTradco/IMG-20240628-WA0018_pbjcoo.jpg",
-  },
-  {
-    src: "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575954/AriserTradco/IMG-20240628-WA0017_dvgk5x.jpg",
-  },
-  {
-    src: "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575954/AriserTradco/IMG-20240628-WA0012_savwma.jpg",
-  },
-  {
-    src: "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575954/AriserTradco/IMG-20240628-WA0011_fr801m.jpg",
-  },
-  {
-    src: "https://res.cloudinary.com/dr5lcwbsx/image/upload/v1719575953/AriserTradco/IMG-20240628-WA0016_gspvf6.jpg",
-  },
 ];
 
 export const ImageSlider = [
